@@ -1,18 +1,14 @@
-const Card = () => {
+const Card = ({ image, price }) => {
   return (
-    <div className="w-96 shadow-xl card card-compact">
+    <div className="w-96 m-[10px] shadow-xl card card-compact">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          alt="Shoes"
-        />
+        <img src={`src/assets/houses/` + image} alt="House picture" />
       </figure>
+
       <div className="card-body">
-        <p className="card-title">Shoes!</p>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="justify-end card-actions">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
+        <p className="card-title">{price}</p>
+        <button className="btn btn-primary">Buy Now</button>
+        <div className="justify-end card-actions"></div>
       </div>
     </div>
   );

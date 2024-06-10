@@ -7,13 +7,13 @@ const Hero = () => {
       }}
     >
       <div className="bg-opacity-35 hero-overlay"></div>
-      <div className="text-white hero-content">
+      <div className="text-white drop-shadow hero-content">
         <div className="max-w-2xl">
           <div className="mb-10">
             <h1 className="mb-5 text-4xl font-bold md:text-5xl">
               Discover your new home
             </h1>
-            <p className="mb-5 text-lg opacity-80">
+            <p className="mb-5 leading-6 opacity-80 text-md">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
