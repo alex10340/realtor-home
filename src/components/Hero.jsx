@@ -1,0 +1,42 @@
+const Hero = () => {
+  return (
+    <div
+      className="min-h-[600px] hero"
+      style={{
+        backgroundImage: "url(src/assets/hero.jpg)",
+      }}
+    >
+      <div className="bg-opacity-35 hero-overlay"></div>
+      <div className="text-white hero-content">
+        <div className="max-w-2xl">
+          <div className="mb-10">
+            <h1 className="mb-5 text-4xl font-bold md:text-5xl">
+              Discover your new home
+            </h1>
+            <p className="mb-5 text-lg opacity-80">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+          </div>
+          <label className="flex gap-2 items-center text-neutral input input-bordered">
+            <input type="text" className="grow" placeholder="Search" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="black"
+              className="w-4 h-4 opacity-70"
+            >
+              <path
+                fillRule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Hero;
