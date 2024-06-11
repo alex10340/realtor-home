@@ -1,8 +1,20 @@
+import React, { useState, useEffect } from "react";
+
 import Card from "./Card";
 
 const Carousel = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="py-8 px-[12px] mx-auto max-w-[1350px]">
+    <div
+      className={`py-8 px-[12px] mx-auto max-w-[1350px] ${
+        isVisible ? "opacity-100" : "opacity-0"
+      } transition-opacity duration-500`}
+    >
       <h3 className="p-2 pt-0 text-xl font-medium">New listings</h3>
       <div className="flex justify-center">
         <Card
