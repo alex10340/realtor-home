@@ -14,7 +14,7 @@ const Card = ({ image, price, location }) => {
           <p className="card-title">{price}</p>
           <p className="mb-2 opacity-90">{location}</p>
         </div>
-        <button className="btn btn-primary">Buy Now</button>
+        <button className="text-white btn btn-primary">Buy Now</button>
       </div>
     </div>
   );

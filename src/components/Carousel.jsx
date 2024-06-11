@@ -5,17 +5,25 @@ const Carousel = () => {
     <div className="py-8 px-[12px] mx-auto max-w-[1350px]">
       <h3 className="p-2 pt-0 text-xl font-medium">New listings</h3>
       <div className="flex justify-center">
-        <Card image="house01.jpg" price="590 000€" location="Lakewood Valley" />
-        <Card image="house02.jpg" price="590 000€" location="Maplewood Grove" />
+        <Card
+          image="house01.jpg"
+          price="590 000€"
+          location="Evergreen Heights"
+        />
+        <Card
+          image="house02.jpg"
+          price="590 000€"
+          location="Silverleaf Meadows"
+        />
         <Card
           image="house03.jpg"
           price="590 000€"
-          location="Willowbrook Estates"
+          location="Evergreen Heights"
         />
         <Card
           image="house04.jpg"
           price="590 000€"
-          location="Silverleaf Meadows"
+          location="Willowbrook Estates"
         />
       </div>
 

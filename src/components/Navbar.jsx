@@ -11,6 +11,19 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex-none gap-2 pr-2">
+          <ul className="px-1 menu menu-horizontal">
+            <li>
+              <a>Membership</a>
+            </li>
+            <li>
+              <a>Agencies</a>
+            </li>
+            <li>
+              <a className="mx-2 text-white bg-primary hover:bg-secondary">
+                Showroom
+              </a>
+            </li>
+          </ul>
           <div className="dropdown dropdown-end">
             <div
               tabIndex="0"

@@ -9,7 +9,7 @@ const GridItem = ({ image, location }) => {
         />
 
         <div className="absolute w-[100%] px-8">
-          <h3 className="font-medium text-white opacity-95 drop-shadow text-md lg:text-xl">
+          <h3 className="text-xl font-medium text-white drop-shadow">
             {location}
           </h3>
         </div>
