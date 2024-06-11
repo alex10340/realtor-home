@@ -19,15 +19,16 @@ const Hero = () => {
               et a id nisi.
             </h2>
           </div>
-          <p className="opacity-80 drop-shadow">
+
+          <p className="opacity-80 drop-shadow label">
             Search for your area, eg. Willowbrook Estates
           </p>
-          <label className="flex gap-2 items-center text-neutral input input-bordered">
+          <label className="flex gap-2 items-center text-neutral input input-bordered input-primary">
             <input type="text" className="grow" placeholder="Search" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
-              fill="white"
+              fill="currentColor"
               className="w-4 h-4 opacity-70"
             >
               <path
