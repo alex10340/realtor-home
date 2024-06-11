@@ -10,14 +10,14 @@ const Hero = () => {
       <div className="text-white drop-shadow hero-content">
         <div className="max-w-2xl">
           <div className="mb-10">
-            <h1 className="mb-5 text-4xl font-bold md:text-5xl">
+            <h1 className="mb-5 text-4xl font-bold md:text-5xl text-balance">
               Discover your new home
             </h1>
-            <p className="mb-5 leading-6 opacity-80 text-md">
+            <h2 className="mb-5 leading-6 opacity-80 text-md">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
-            </p>
+            </h2>
           </div>
           <label className="flex gap-2 items-center text-neutral input input-bordered">
             <input type="text" className="grow" placeholder="Search" />
