@@ -7,8 +7,7 @@ const Grid = () => {
       <div className="grid grid-cols sm:grid-cols-2 lg:grid-cols-3">
         <GridItem
           image="location01.jpg"
-          location="Evergreen Heights
-"
+          location="Evergreen Heights"
         ></GridItem>
         <GridItem
           image="location02.jpg"
@@ -20,7 +19,7 @@ const Grid = () => {
           image="location05.jpg"
           location="Silverleaf Meadows"
         ></GridItem>
-        <GridItem image="location06.jpg" location="Maplewood Grove"></GridItem>
+        <GridItem image="location06.jpg" location="Magnolia Bay"></GridItem>
       </div>
     </div>
   );
