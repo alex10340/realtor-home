@@ -19,7 +19,7 @@ const Navbar = () => {
               <a>Agencies</a>
             </li>
             <li>
-              <a className="mx-2 text-white bg-primary hover:bg-secondary">
+              <a className="mx-2 text-white bg-primary hover:bg-secondary glass">
                 Showroom
               </a>
             </li>
