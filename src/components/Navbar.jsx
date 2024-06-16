@@ -2,6 +2,40 @@ const Navbar = () => {
   return (
     <div className="mx-auto max-w-[1350px]">
       <div className="navbar px-[12px]">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="space-y-1 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a className="p-2">Membership</a>
+            </li>
+            <li>
+              <a className="p-2">Agencies</a>
+            </li>
+            <li>
+              <a className="p-2 bg-primary hover:bg-secondary glass">
+                Showroom
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className="flex-1">
           <a className="pl-2 text-xl btn btn-ghost" href="#">
             <div>
@@ -11,7 +45,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex-none gap-2 pr-2">
-          <ul className="px-1 menu menu-horizontal">
+          <ul className="hidden px-1 menu menu-horizontal sm:flex">
             <li>
               <a>Membership</a>
             </li>
