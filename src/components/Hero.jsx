@@ -6,22 +6,22 @@ const Hero = () => {
         backgroundImage: "url(src/assets/hero.jpg)",
       }}
     >
-      <div className="bg-opacity-35 hero-overlay"></div>
+      <div className="bg-opacity-55 bg-[#736f98] hero-overlay"></div>
       <div className="text-white drop-shadow hero-content">
         <div className="max-w-2xl">
           <div className="mb-10">
-            <h1 className="mb-3 font-serif text-4xl font-extrabold md:text-5xl text-balance">
+            <h1 className="mb-3 text-4xl font-extrabold md:text-5xl text-balance">
               Discover your new home
             </h1>
-            <h2 className="mb-6 font-medium leading-6 opacity-80 text-md">
+            <h2 className="mb-6 font-medium leading-6 opacity-85 text-md">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </h2>
           </div>
 
-          <p className="opacity-80 drop-shadow label">
-            Search for your area, eg. Willowbrook Estates
+          <p className="drop-shadow opacity-85 label">
+            Search for your area, eg. Evergreen Heights
           </p>
           <label className="flex gap-2 items-center text-neutral input input-bordered input-primary">
             <input type="text" className="grow" placeholder="Search" />

@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
 import Grid from "./components/Grid";
 import FindAgent from "./components/FindAgent";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Carousel></Carousel>
       <Grid></Grid>
       <FindAgent></FindAgent>
+      <Footer></Footer>
     </>
   );
 };

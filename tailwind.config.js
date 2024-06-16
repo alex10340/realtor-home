@@ -3,8 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "Ubuntu", "system-ui", "Helvetica", "sans-serif"],
-      serif: ["Lusitana", "system-ui"],
+      sans: ["Ubuntu", "system-ui", "Helvetica", "sans-serif"],
     },
     extend: {},
   },
@@ -16,6 +15,7 @@ export default {
           ...require("daisyui/src/theming/themes")["light"],
           primary: "#8476ff",
           secondary: "#7161ff",
+          neutral: "#3a3859",
         },
         dracula: {
           ...require("daisyui/src/theming/themes")["dracula"],

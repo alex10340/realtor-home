@@ -15,7 +15,7 @@ const Carousel = () => {
         isVisible ? "opacity-100" : "opacity-0"
       } transition-opacity duration-500`}
     >
-      <h3 className="p-2 pt-0 font-serif text-2xl font-bold">New listings</h3>
+      <h3 className="p-2 pt-0 text-xl font-medium">New listings</h3>
       <div className="flex justify-center">
         <Card
           image="house01.jpg"
@@ -39,9 +39,7 @@ const Carousel = () => {
         />
       </div>
 
-      <h3 className="p-2 pt-8 font-serif text-2xl font-bold">
-        AcmeHome Collection
-      </h3>
+      <h3 className="p-2 pt-8 text-xl font-medium">AcmeHome Collection</h3>
       <div className="flex justify-center">
         <Card image="house05.jpg" price="590 000€" location="Lakewood Valley" />
         <Card image="house06.jpg" price="590 000€" location="Maplewood Grove" />
