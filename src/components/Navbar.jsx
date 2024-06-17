@@ -50,7 +50,7 @@ const Navbar = () => {
               <a>Membership</a>
             </li>
             <li>
-              <a>Agencies</a>
+              <a className="mx-2">Agencies</a>
             </li>
             <li>
               <a className="mx-2 text-white bg-primary hover:bg-secondary glass">
