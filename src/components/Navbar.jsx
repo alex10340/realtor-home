@@ -45,12 +45,12 @@ const Navbar = () => {
           </a>
         </div>
         <div className="flex-none gap-2 pr-2">
-          <ul className="hidden px-1 menu menu-horizontal sm:flex">
+          <ul className="hidden space-x-2 menu menu-horizontal sm:flex">
             <li>
               <a>Membership</a>
             </li>
             <li>
-              <a className="mx-2">Agencies</a>
+              <a>Agencies</a>
             </li>
             <li>
               <a className="mx-2 text-white bg-primary hover:bg-secondary glass">
