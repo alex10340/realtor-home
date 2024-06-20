@@ -11,6 +11,7 @@ const Card = ({ image, price, location }) => {
 
       <div className="card-body">
         <div className="">
+          {/*          ^^ h-[80px] for text shift */}
           <p className="card-title">{price}</p>
           <p className="mb-2 opacity-90">{location}</p>
         </div>

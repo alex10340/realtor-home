@@ -9,7 +9,7 @@ const GridItem = ({ image, location }) => {
         />
 
         <div className=" flex items-center justify-between absolute w-[100%] px-8">
-          <h3 className="text-xl font-medium text-white drop-shadow-md">
+          <h3 className="pr-4 text-xl font-medium text-white drop-shadow-md">
             {location}
           </h3>
           <span className="text-sm font-medium drop-shadow-md btn">

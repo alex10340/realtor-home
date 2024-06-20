@@ -36,7 +36,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 justify-center sm:justify-normal">
           <a className="pl-2 text-xl btn btn-ghost" href="#">
             <div>
               <img src="src/assets/icon.png" alt="logo" className="w-10" />
