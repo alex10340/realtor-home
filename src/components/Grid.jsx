@@ -2,8 +2,8 @@ import GridItem from "./GridItem";
 
 const Grid = () => {
   return (
-    <div className="py-8 px-[12px] mx-auto max-w-[1350px]">
-      <h3 className="p-2 pt-0 text-xl font-medium">Most popular areas</h3>
+    <div className="py-10 px-[12px] mx-auto max-w-[1350px]">
+      <h3 className="p-2 pt-0 pb-4 text-2xl font-normal">Most popular areas</h3>
       <div className="grid grid-cols sm:grid-cols-2 lg:grid-cols-3">
         <GridItem
           image="location01.jpg"
