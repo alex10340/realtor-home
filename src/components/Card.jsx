@@ -1,6 +1,6 @@
 const Card = ({ image, price, location }) => {
   return (
-    <div className="w-96 m-[10px] shadow-xl card card-compact">
+    <div className="m-[10px] shadow-xl card card-compact">
       <figure className="overflow-hidden aspect-[2/1.25] cursor-pointer">
         <img
           className="transition duration-500 scale-110 hover:scale-100 hover:opacity-80"
@@ -11,7 +11,6 @@ const Card = ({ image, price, location }) => {
 
       <div className="card-body">
         <div className="">
-          {/*          ^^ h-[80px] for text shift */}
           <p className="card-title">{price}</p>
           <p className="mb-2 opacity-90">{location}</p>
         </div>
@@ -21,3 +20,5 @@ const Card = ({ image, price, location }) => {
   );
 };
 export default Card;
+
+Card;

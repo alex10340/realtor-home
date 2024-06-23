@@ -30,7 +30,7 @@ const Navbar = () => {
               <a className="p-2">Agencies</a>
             </li>
             <li>
-              <a className="p-2 bg-primary hover:bg-secondary glass">
+              <a className="p-2 text-white bg-primary hover:bg-secondary glass">
                 Showroom
               </a>
             </li>
