@@ -26,17 +26,19 @@ const Carousel = () => {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
+    draggable: false,
+    swipe: true, // set to false on modal
     swipeToSlide: true,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1080,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },

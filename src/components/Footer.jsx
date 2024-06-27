@@ -22,7 +22,7 @@ const Footer = () => {
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>
-        <form>
+        {/* <form>
           <h6 className="footer-title">Newsletter</h6>
           <div className="w-80 form-control">
             <label className="label">
@@ -37,7 +37,7 @@ const Footer = () => {
               <div className="btn btn-primary join-item">Subscribe</div>
             </div>
           </div>
-        </form>
+        </form> */}
       </footer>
     </div>
   );

@@ -2,7 +2,10 @@ const Card = ({ img, price, location }) => {
   return (
     <>
       <div className="m-[10px] shadow-xl card card-compact">
-        <figure className="overflow-hidden aspect-[2/1.25] cursor-pointer">
+        <figure
+          className="overflow-hidden aspect-[2/1.25] cursor-pointer"
+          onClick={() => document.getElementById("my_modal_1").showModal()}
+        >
           <img
             className="transition duration-500 scale-110 hover:scale-100 hover:opacity-80"
             src={img}
@@ -15,18 +18,17 @@ const Card = ({ img, price, location }) => {
             <p className="card-title">{price}</p>
             <p className="mb-2 opacity-90">{location}</p>
           </div>
-          <button className="text-white btn btn-primary">Buy Now</button>
+          <button
+            className="text-white btn btn-primary"
+            onClick={() => document.getElementById("my_modal_1").showModal()}
+          >
+            Buy Now
+          </button>
         </div>
       </div>
 
       {/* ---------------------------------------------------------------------------------- */}
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-      <button
-        className="btn"
-        onClick={() => document.getElementById("my_modal_1").showModal()}
-      >
-        open modal
-      </button>
+
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
           <h3 className="text-lg font-bold">Hello!</h3>
