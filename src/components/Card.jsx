@@ -1,10 +1,12 @@
-const Card = ({ img, price, location }) => {
+const Card = ({ id, img, price, location }) => {
   return (
     <>
       <div className="m-[10px] shadow-xl card card-compact">
         <figure
           className="overflow-hidden aspect-[2/1.25] cursor-pointer"
-          onClick={() => document.getElementById("my_modal_1").showModal()}
+          onClick={() =>
+            document.getElementById(`property-modal-${id}`).showModal()
+          }
         >
           <img
             className="transition duration-500 scale-110 hover:scale-100 hover:opacity-80"
@@ -20,7 +22,9 @@ const Card = ({ img, price, location }) => {
           </div>
           <button
             className="text-white btn btn-primary"
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={() =>
+              document.getElementById(`property-modal-${id}`).showModal()
+            }
           >
             Buy Now
           </button>
@@ -29,12 +33,13 @@ const Card = ({ img, price, location }) => {
 
       {/* ---------------------------------------------------------------------------------- */}
 
-      <dialog id="my_modal_1" className="modal">
+      <dialog id={`property-modal-${id}`} className="modal">
         <div className="modal-box">
           <h3 className="text-lg font-bold">Hello!</h3>
           <p className="py-4">
             Press ESC key or click the button below to close
           </p>
+          <img src={img} alt="House picture" />
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
@@ -47,5 +52,3 @@ const Card = ({ img, price, location }) => {
   );
 };
 export default Card;
-
-Card;

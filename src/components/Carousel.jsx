@@ -107,13 +107,13 @@ const Carousel = () => {
       <div className="mx-[-12px]">
         <Slider ref={newListingsSliderRef} {...settings} className="">
           {newListings.map((house) => (
-            <div key={house.id}>
-              <Card
-                img={house.img}
-                price={house.price}
-                location={house.location}
-              />
-            </div>
+            <Card
+              key={house.id}
+              id={house.id}
+              img={house.img}
+              price={house.price}
+              location={house.location}
+            />
           ))}
         </Slider>
       </div>
@@ -129,13 +129,13 @@ const Carousel = () => {
       <div className="mx-[-12px]">
         <Slider ref={collectionSliderRef} {...settings} className="">
           {acmeHomeCollection.map((house) => (
-            <div key={house.id}>
-              <Card
-                img={house.img}
-                price={house.price}
-                location={house.location}
-              />
-            </div>
+            <Card
+              key={house.id}
+              id={house.id}
+              img={house.img}
+              price={house.price}
+              location={house.location}
+            />
           ))}
         </Slider>
       </div>
