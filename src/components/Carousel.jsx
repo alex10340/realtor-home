@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const newListingsSliderRef = useRef(null);
+  const collectionSliderRef = useRef(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,9 +42,6 @@ const Carousel = () => {
       },
     ],
   };
-
-  const newListingsSliderRef = useRef(null);
-  const collectionSliderRef = useRef(null);
 
   const NextArrow = ({ onClick }) => (
     <button onClick={onClick} className="p-2 btn btn-ghost">
