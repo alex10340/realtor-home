@@ -1,11 +1,11 @@
-const Card = ({ image, price, location }) => {
+const Card = ({ img, price, location }) => {
   return (
     <>
       <div className="m-[10px] shadow-xl card card-compact">
         <figure className="overflow-hidden aspect-[2/1.25] cursor-pointer">
           <img
             className="transition duration-500 scale-110 hover:scale-100 hover:opacity-80"
-            src={`src/assets/houses/` + image}
+            src={img}
             alt="House picture"
           />
         </figure>

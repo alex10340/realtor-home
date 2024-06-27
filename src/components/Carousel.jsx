@@ -1,17 +1,24 @@
 import { useState, useEffect, useRef } from "react";
-import Card from "./Card";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Card from "./Card";
+import { houses } from "../data/allData";
 
 const Carousel = () => {
   const [isVisible, setIsVisible] = useState(false);
   const newListingsSliderRef = useRef(null);
   const collectionSliderRef = useRef(null);
 
+  const newListings = houses.filter((house) => house.category == "new");
+  const acmeHomeCollection = houses.filter(
+    (house) => house.category == "collection"
+  );
+
   useEffect(() => {
     setIsVisible(true);
+    console.log(newListings);
+    console.log(acmeHomeCollection);
   }, []);
 
   const settings = {
@@ -97,46 +104,15 @@ const Carousel = () => {
 
       <div className="mx-[-12px]">
         <Slider ref={newListingsSliderRef} {...settings} className="">
-          <Card
-            image="house01.jpg"
-            price="590 000€"
-            location="Evergreen Heights"
-          />
-          <Card
-            image="house02.jpg"
-            price="590 000€"
-            location="Silverleaf Meadows"
-          />
-          <Card
-            image="house03.jpg"
-            price="590 000€"
-            location="Evergreen Heights"
-          />
-          <Card
-            image="house04.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house05.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house06.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house07.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house08.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
+          {newListings.map((house) => (
+            <div key={house.id}>
+              <Card
+                img={house.img}
+                price={house.price}
+                location={house.location}
+              />
+            </div>
+          ))}
         </Slider>
       </div>
 
@@ -150,46 +126,15 @@ const Carousel = () => {
 
       <div className="mx-[-12px]">
         <Slider ref={collectionSliderRef} {...settings} className="">
-          <Card
-            image="house01.jpg"
-            price="590 000€"
-            location="Evergreen Heights"
-          />
-          <Card
-            image="house02.jpg"
-            price="590 000€"
-            location="Silverleaf Meadows"
-          />
-          <Card
-            image="house03.jpg"
-            price="590 000€"
-            location="Evergreen Heights"
-          />
-          <Card
-            image="house04.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house05.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house06.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house07.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
-          <Card
-            image="house08.jpg"
-            price="590 000€"
-            location="Willowbrook Estates"
-          />
+          {acmeHomeCollection.map((house) => (
+            <div key={house.id}>
+              <Card
+                img={house.img}
+                price={house.price}
+                location={house.location}
+              />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>

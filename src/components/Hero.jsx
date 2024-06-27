@@ -1,9 +1,11 @@
+import HeroImg from "../assets/hero.jpg";
+
 const Hero = () => {
   return (
     <div
       className="min-h-[600px] hero"
       style={{
-        backgroundImage: "url(src/assets/hero.jpg)",
+        backgroundImage: `url(${HeroImg})`,
       }}
     >
       <div className="bg-opacity-55 bg-[#736f98] hero-overlay"></div>
@@ -29,7 +31,7 @@ const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              className="w-4 h-4 opacity-70"
+              className="w-5 h-5 opacity-70"
             >
               <path
                 fillRule="evenodd"

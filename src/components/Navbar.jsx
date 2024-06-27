@@ -1,3 +1,5 @@
+import Logo from "../assets/logo.png";
+
 const Navbar = () => {
   return (
     <div className="mx-auto max-w-[1350px]">
@@ -39,7 +41,7 @@ const Navbar = () => {
         <div className="flex-1 justify-center sm:justify-normal">
           <a className="pl-2 text-xl btn btn-ghost" href="#">
             <div>
-              <img src="src/assets/icon.png" alt="logo" className="w-10" />
+              <img src={Logo} alt="logo" className="w-10" />
             </div>
             <div className="">AcmeHome</div>
           </a>
