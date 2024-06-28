@@ -1,6 +1,6 @@
 const GridItem = ({ img, location }) => {
   return (
-    <div className="m-2 lg:m-[10px] card card-compact group">
+    <div className="m-2 lg:m-[10px] card card-compact group max-h-[150px]">
       <figure className="shadow-xl relative overflow-hidden rounded-2xl aspect-[3/1] cursor-pointer bg-black">
         <img
           className="opacity-70 transition duration-500 scale-110 group-hover:scale-100 group-hover:opacity-60"

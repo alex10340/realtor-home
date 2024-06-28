@@ -32,19 +32,19 @@ const Carousel = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1080,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 925,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 620,
         settings: {
           slidesToShow: 1,
         },
@@ -105,7 +105,7 @@ const Carousel = () => {
       </div>
 
       <div className="mx-[-12px]">
-        <Slider ref={newListingsSliderRef} {...settings} className="">
+        <Slider ref={newListingsSliderRef} {...settings}>
           {newListings.map((house) => (
             <Card
               key={house.id}
@@ -113,6 +113,9 @@ const Carousel = () => {
               img={house.img}
               price={house.price}
               location={house.location}
+              listingType={house.listingType}
+              bedrooms={house.bedrooms}
+              bathrooms={house.bathrooms}
             />
           ))}
         </Slider>
@@ -127,7 +130,7 @@ const Carousel = () => {
       </div>
 
       <div className="mx-[-12px]">
-        <Slider ref={collectionSliderRef} {...settings} className="">
+        <Slider ref={collectionSliderRef} {...settings}>
           {acmeHomeCollection.map((house) => (
             <Card
               key={house.id}
@@ -135,6 +138,9 @@ const Carousel = () => {
               img={house.img}
               price={house.price}
               location={house.location}
+              listingType={house.listingType}
+              bedrooms={house.bedrooms}
+              bathrooms={house.bathrooms}
             />
           ))}
         </Slider>

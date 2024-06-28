@@ -2,7 +2,7 @@ import Logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="sticky w-full top-0 bg-white z-[1000] shadow-xl">
+    <div className="sticky w-full top-0 bg-base-100 z-[1000] shadow-xl">
       <div className="mx-auto max-w-[1350px]">
         <div className="navbar px-[12px]">
           <div className="dropdown">
