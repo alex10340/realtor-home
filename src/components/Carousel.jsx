@@ -17,8 +17,8 @@ const Carousel = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    console.log(newListings);
-    console.log(acmeHomeCollection);
+    // console.log(newListings);
+    // console.log(acmeHomeCollection);
   }, []);
 
   const settings = {
