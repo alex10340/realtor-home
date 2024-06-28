@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className="mb-10">
             <h1 className="mb-3 text-4xl font-extrabold lg:text-5xl text-balance">
-              Discover your new home -- TEST COMMIT
+              Discover your new home
             </h1>
             <h2 className="mb-6 font-medium leading-6 opacity-85 text-md">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
