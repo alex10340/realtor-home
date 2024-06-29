@@ -10,15 +10,13 @@ const Carousel = () => {
   const newListingsSliderRef = useRef(null);
   const collectionSliderRef = useRef(null);
 
-  const newListings = houses.filter((house) => house.category == "new");
+  const newListings = houses.filter((house) => house.category == "New");
   const acmeHomeCollection = houses.filter(
-    (house) => house.category == "collection"
+    (house) => house.category == "Collection"
   );
 
   useEffect(() => {
     setIsVisible(true);
-    // console.log(newListings);
-    // console.log(acmeHomeCollection);
   }, []);
 
   const settings = {
@@ -111,6 +109,7 @@ const Carousel = () => {
               key={house.id}
               id={house.id}
               img={house.img}
+              category={house.category}
               price={house.price}
               location={house.location}
               listingType={house.listingType}
@@ -136,6 +135,7 @@ const Carousel = () => {
               key={house.id}
               id={house.id}
               img={house.img}
+              category={house.category}
               price={house.price}
               location={house.location}
               listingType={house.listingType}
