@@ -63,6 +63,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 2,
@@ -73,6 +74,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "3",
+    favorite: false,
   },
   {
     id: 3,
@@ -83,6 +85,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 4,
@@ -93,6 +96,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 5,
@@ -103,6 +107,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 6,
@@ -113,6 +118,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 7,
@@ -123,6 +129,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 8,
@@ -133,6 +140,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 9,
@@ -143,6 +151,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 10,
@@ -153,6 +162,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 11,
@@ -163,6 +173,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 12,
@@ -173,6 +184,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 13,
@@ -183,6 +195,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
   {
     id: 14,
@@ -193,5 +206,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    favorite: false,
   },
 ];
