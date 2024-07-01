@@ -150,7 +150,7 @@ const Card = ({
             </p>
             <div className="sticky w-full h-16 bottom-0 bg-base-100 flex z-[1000] shadow-[0_12px_24px_0_rgba(0,0,0,0.5)]">
               <div className="flex m-2 space-x-2 w-full">
-                <label className="swap swap-flip">
+                <label className="swap">
                   <input type="checkbox" />
                   <div className="swap-on">
                     <svg
