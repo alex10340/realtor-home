@@ -63,18 +63,17 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
+    desc: "Nestled in a serene neighborhood, this charming Craftsman-style home boasts a picturesque exterior with inviting warm tones and classic architectural details. The spacious front porch welcomes you into a well-maintained interior featuring modern amenities and cozy living spaces. Large windows flood the home with natural light, highlighting the beautiful craftsmanship. Surrounded by lush greenery, the property offers a perfect blend of comfort and elegance, making it an ideal retreat for those seeking a tranquil lifestyle.",
   },
   {
-    id: 2,
+    id: 2, // this one is an interior (kitchen) --> remove
     location: "Evergreen Heights",
     price: "661 000€",
     img: House02,
-    category: "New",
+    category: "none",
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "3",
-    favorite: false,
   },
   {
     id: 3,
@@ -85,7 +84,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "2",
-    favorite: false,
+    desc: "This charming craftsman-style home offers a perfect blend of rustic elegance and modern comfort. With its inviting front porch, large windows, and beautiful wooden accents, this two-story residence is ideal for families seeking a cozy yet spacious living environment. Nestled in a serene, green landscape, it promises tranquility and comfort. The spacious interior is designed with a contemporary touch, making it an ideal retreat from the hustle and bustle of everyday life.",
   },
   {
     id: 4,
@@ -96,7 +95,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
+    desc: "Discover this unique architectural gem, a multi-level tropical retreat surrounded by lush greenery and vibrant flora. The organic, flowing design of the building seamlessly integrates with the natural landscape, offering a tranquil and luxurious living experience. Each level features spacious terraces perfect for relaxation and enjoying the serene environment. Ideal for those seeking an exotic, nature-immersed lifestyle with all the comforts of modern living.",
   },
   {
     id: 5,
@@ -107,7 +106,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
+    desc: "Experience the charm of this cozy A-frame cottage, perfect for those who appreciate unique architecture and a peaceful setting. The inviting front patio and expansive lawn create a warm and welcoming atmosphere. Inside, the home features an open floor plan with plenty of natural light, making it an ideal space for relaxation and entertaining. The combination of rustic charm and modern amenities ensures a comfortable and stylish living environment.",
   },
   {
     id: 6,
@@ -118,7 +117,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
+    desc: "Embrace contemporary luxury in this stunning modern home, characterized by its sleek lines, expansive windows, and minimalist design. The open-plan living spaces are flooded with natural light, creating a bright and airy atmosphere. Outdoor balconies provide breathtaking views and are perfect for enjoying the fresh air. This property combines cutting-edge architecture with elegant finishes, making it a perfect choice for those seeking a sophisticated and stylish lifestyle.",
   },
   {
     id: 7,
@@ -129,7 +128,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 8,
@@ -140,18 +138,16 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 9,
     location: "Evergreen Heights",
     price: "590 000€",
     img: House09,
-    category: "New",
+    category: "none",
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 10,
@@ -162,7 +158,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 11,
@@ -173,7 +168,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 12,
@@ -184,7 +178,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 13,
@@ -195,7 +188,6 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
   {
     id: 14,

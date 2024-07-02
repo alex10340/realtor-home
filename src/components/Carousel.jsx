@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import Card from "./Card";
 import { houses } from "../data/allData";
 
@@ -105,17 +106,7 @@ const Carousel = () => {
       <div className="mx-[-12px]">
         <Slider ref={newListingsSliderRef} {...settings}>
           {newListings.map((house) => (
-            <Card
-              key={house.id}
-              id={house.id}
-              img={house.img}
-              category={house.category}
-              price={house.price}
-              location={house.location}
-              listingType={house.listingType}
-              bedrooms={house.bedrooms}
-              bathrooms={house.bathrooms}
-            />
+            <Card key={house.id} house={house} />
           ))}
         </Slider>
       </div>
@@ -131,17 +122,7 @@ const Carousel = () => {
       <div className="mx-[-12px]">
         <Slider ref={collectionSliderRef} {...settings}>
           {acmeHomeCollection.map((house) => (
-            <Card
-              key={house.id}
-              id={house.id}
-              img={house.img}
-              category={house.category}
-              price={house.price}
-              location={house.location}
-              listingType={house.listingType}
-              bedrooms={house.bedrooms}
-              bathrooms={house.bathrooms}
-            />
+            <Card key={house.id} house={house} />
           ))}
         </Slider>
       </div>

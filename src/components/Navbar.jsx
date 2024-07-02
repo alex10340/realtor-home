@@ -27,7 +27,7 @@ const Navbar = () => {
               className="shadow-xl space-y-1 menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="p-2">Membership</a>
+                <a className="p-2">Locations</a>
               </li>
               <li>
                 <a className="p-2">Agencies</a>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="flex-none gap-2 pr-2">
             <ul className="hidden space-x-2 menu menu-horizontal sm:flex">
               <li>
-                <a>Membership</a>
+                <a>Locations</a>
               </li>
               <li>
                 <a>Agencies</a>

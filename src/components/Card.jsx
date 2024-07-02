@@ -1,16 +1,19 @@
 import Logo from "../assets/logo.png";
 import classNames from "classnames";
 
-const Card = ({
-  id,
-  img,
-  category = "none",
-  price = "--- --- €",
-  location = "Location",
-  listingType = "listingType",
-  bedrooms = "-",
-  bathrooms = "-",
-}) => {
+const Card = ({ house }) => {
+  const {
+    id,
+    img,
+    category = "none",
+    price = "--- --- €",
+    location = "Location",
+    listingType = "listingType",
+    bedrooms = "-",
+    bathrooms = "-",
+    desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deleniti tempore, voluptatem id, eaque fuga dolorum voluptatibus, laudantium nihil praesentium obcaecati facilis amet dicta nulla velit suscipit dolorem optio possimus voluptates! Sapiente nesciunt, facere odio, incidunt ipsa totam quaerat porro sed laborum nam obcaecati numquam at alias atque? Alias, illo?",
+  } = house;
+
   const categoryClass = classNames(
     "p-2 text-sm font-bold text-white rounded-full shadow",
     {
@@ -90,6 +93,8 @@ const Card = ({
             <h3 className="flex-1 pr-1 text-xl font-bold drop-shado">
               {listingType} in{" "}
               <span className="underline decoration-primary">{location}</span>
+              {/* REMOVE FOR PROD */}
+              <span className="ml-4 text-red-500">ID: {id}</span>
             </h3>
             <span className={categoryClass}>{category}</span>
           </div>
@@ -136,18 +141,7 @@ const Card = ({
               </div>
             </div>
 
-            <p className="flex-1 p-6 shadow-inner opacity-90">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
-              minus obcaecati magnam sapiente nobis fugit sit, est aut culpa
-              laborum neque minima quisquam, ullam molestias distinctio enim?
-              Labore, suscipit minus consequatur quibusdam aut qui ea? Adipisci
-              hic fugit beatae in mollitia aliquid esse ducimus at! Fuga officia
-              alias facere corrupti ullam, aperiam reiciendis, architecto modi
-              voluptatibus maiores repellendus id, mollitia atque. Quia
-              molestias laborum amet nulla voluptates modi accusamus
-              perferendis, quam distinctio ea culpa necessitatibus unde ex
-              earum! Voluptatum, suscipit!
-            </p>
+            <p className="flex-1 p-6 shadow-inner opacity-90">{desc}</p>
             <div className="sticky w-full h-16 bottom-0 bg-base-100 flex z-[1000] shadow-[0_12px_24px_0_rgba(0,0,0,0.5)]">
               <div className="flex m-2 space-x-2 w-full">
                 <label className="swap">
