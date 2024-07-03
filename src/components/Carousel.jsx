@@ -36,6 +36,7 @@ const Carousel = () => {
     swipe: !modalVisible, // set to false on modal
     swipeToSlide: true,
     arrows: false,
+    accessibility: false,
     responsive: [
       {
         breakpoint: 1235,
