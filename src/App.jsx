@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
 import Grid from "./components/Grid";
 import FindAgent from "./components/FindAgent";
+import DownloadApp from "./components/DownloadApp";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Carousel></Carousel>
       <Grid></Grid>
       <FindAgent></FindAgent>
+      <DownloadApp></DownloadApp>
       <Footer></Footer>
     </>
   );
