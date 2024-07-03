@@ -1,55 +1,39 @@
-import Location1 from "../assets/locations/location01.jpg";
-import Location2 from "../assets/locations/location02.jpg";
-import Location3 from "../assets/locations/location03.jpg";
-import Location4 from "../assets/locations/location04.jpg";
-import Location5 from "../assets/locations/location05.jpg";
-import Location6 from "../assets/locations/location06.jpg";
+import * as Houses from "../assets/houses";
+import * as Locations from "../assets/locations";
 
-import House01 from "../assets/houses/house01.jpg";
-import House02 from "../assets/houses/house02.jpg";
-import House03 from "../assets/houses/house03.jpg";
-import House04 from "../assets/houses/house04.jpg";
-import House05 from "../assets/houses/house05.jpg";
-import House06 from "../assets/houses/house06.jpg";
-import House07 from "../assets/houses/house07.jpg";
-import House08 from "../assets/houses/house08.jpg";
-import House09 from "../assets/houses/house09.jpg";
-import House10 from "../assets/houses/house10.jpg";
-import House11 from "../assets/houses/house11.jpg";
-import House12 from "../assets/houses/house12.jpg";
-import House13 from "../assets/houses/house13.jpg";
-import House14 from "../assets/houses/house14.jpg";
+import House01Interior01 from "../assets/interiors/house01interior01.jpg";
+import House01Interior02 from "../assets/interiors/house01interior02.jpg";
 
 export const locations = [
   {
     id: 1,
     name: "Evergreen Heights",
-    img: Location1,
+    img: Locations.Location01,
   },
   {
     id: 2,
     name: "Willowbrook Estates",
-    img: Location2,
+    img: Locations.Location02,
   },
   {
     id: 3,
     name: "Maplewood Grove",
-    img: Location3,
+    img: Locations.Location03,
   },
   {
     id: 4,
     name: "Cedarview Harbor",
-    img: Location4,
+    img: Locations.Location04,
   },
   {
     id: 5,
     name: "Silverleaf Meadows",
-    img: Location5,
+    img: Locations.Location05,
   },
   {
     id: 6,
     name: "Magnolia Bay",
-    img: Location6,
+    img: Locations.Location06,
   },
 ];
 
@@ -57,20 +41,21 @@ export const houses = [
   {
     id: 1,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House01,
+    price: "732 000€",
+    img: Houses.House01,
     category: "New",
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
+    interiors: [House01Interior01, House01Interior02],
     desc: "Nestled in a serene neighborhood, this charming Craftsman-style home boasts a picturesque exterior with inviting warm tones and classic architectural details. The spacious front porch welcomes you into a well-maintained interior featuring modern amenities and cozy living spaces. Large windows flood the home with natural light, highlighting the beautiful craftsmanship. Surrounded by lush greenery, the property offers a perfect blend of comfort and elegance, making it an ideal retreat for those seeking a tranquil lifestyle.",
   },
   {
-    id: 2, // this one is an interior (kitchen) --> remove
+    id: 2,
     location: "Evergreen Heights",
-    price: "661 000€",
-    img: House02,
-    category: "none",
+    price: "845 000€",
+    img: Houses.House02,
+    category: "New",
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "3",
@@ -78,8 +63,8 @@ export const houses = [
   {
     id: 3,
     location: "Evergreen Heights",
-    price: "820 000€",
-    img: House03,
+    price: "1 005 000€",
+    img: Houses.House03,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "4",
@@ -89,8 +74,8 @@ export const houses = [
   {
     id: 4,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House04,
+    price: "589 000€",
+    img: Houses.House04,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "3",
@@ -100,8 +85,8 @@ export const houses = [
   {
     id: 5,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House05,
+    price: "695 000€",
+    img: Houses.House05,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "3",
@@ -111,9 +96,9 @@ export const houses = [
   {
     id: 6,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House06,
-    category: "New",
+    price: "1 210 000€",
+    img: Houses.House06,
+    category: "none",
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
@@ -122,9 +107,9 @@ export const houses = [
   {
     id: 7,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House07,
-    category: "New",
+    price: "530 000€",
+    img: Houses.House07,
+    category: "none",
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
@@ -132,8 +117,8 @@ export const houses = [
   {
     id: 8,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House08,
+    price: "478 000€",
+    img: Houses.House08,
     category: "New",
     listingType: "For sale",
     bedrooms: "3",
@@ -142,8 +127,8 @@ export const houses = [
   {
     id: 9,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House09,
+    price: "687 000€",
+    img: Houses.House09,
     category: "none",
     listingType: "For sale",
     bedrooms: "3",
@@ -152,8 +137,8 @@ export const houses = [
   {
     id: 10,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House10,
+    price: "912 000€",
+    img: Houses.House10,
     category: "New",
     listingType: "For sale",
     bedrooms: "3",
@@ -162,18 +147,18 @@ export const houses = [
   {
     id: 11,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House11,
+    price: "575 000€",
+    img: Houses.House11,
     category: "New",
     listingType: "For sale",
-    bedrooms: "3",
+    bedrooms: "4",
     bathrooms: "2",
   },
   {
     id: 12,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House12,
+    price: "1 110 000€",
+    img: Houses.House12,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "3",
@@ -182,8 +167,8 @@ export const houses = [
   {
     id: 13,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House13,
+    price: "625 000€",
+    img: Houses.House13,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "3",
@@ -192,12 +177,11 @@ export const houses = [
   {
     id: 14,
     location: "Evergreen Heights",
-    price: "590 000€",
-    img: House14,
+    price: "920 000€",
+    img: Houses.House14,
     category: "Collection",
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    favorite: false,
   },
 ];

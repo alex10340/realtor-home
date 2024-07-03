@@ -1,7 +1,14 @@
+import { useRef } from "react";
 import Logo from "../assets/logo.png";
 import classNames from "classnames";
 
-const Card = ({ house }) => {
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import PrevArrow from "./carousel arrows/PrevArrow";
+import NextArrow from "./carousel arrows/NextArrow";
+
+const Card = ({ house, toggleModal }) => {
   const {
     id,
     img,
@@ -11,24 +18,45 @@ const Card = ({ house }) => {
     listingType = "listingType",
     bedrooms = "-",
     bathrooms = "-",
+    interiors = [],
     desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deleniti tempore, voluptatem id, eaque fuga dolorum voluptatibus, laudantium nihil praesentium obcaecati facilis amet dicta nulla velit suscipit dolorem optio possimus voluptates! Sapiente nesciunt, facere odio, incidunt ipsa totam quaerat porro sed laborum nam obcaecati numquam at alias atque? Alias, illo?",
   } = house;
 
   const categoryClass = classNames(
     "p-2 text-sm font-bold text-white rounded-full shadow",
     {
-      "bg-accent": category === "New",
+      "bg-green-500": category === "New",
       "bg-yellow-500": category === "Collection",
     }
   );
+
+  const openModal = () => {
+    toggleModal();
+    document.getElementById(`property-modal-${id}`).showModal();
+  };
+
+  const carouselRef = useRef(null);
+
+  const sliderReset = () => {
+    carouselRef.current.slickGoTo(0);
+  };
+
+  const settings = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: false,
+    swipe: true,
+    swipeToSlide: true,
+    arrows: false,
+  };
 
   return (
     <>
       <div
         className="m-[10px] shadow-xl card card-compact cursor-pointer group"
-        onClick={() =>
-          document.getElementById(`property-modal-${id}`).showModal()
-        }
+        onClick={openModal}
       >
         <figure className="overflow-hidden aspect-[2/1.25]">
           <img
@@ -74,41 +102,84 @@ const Card = ({ house }) => {
         </div>
       </div>
 
-      {/* ---------------------------------------------------------------------------------- */}
+      {/* Modal */}
 
-      <dialog id={`property-modal-${id}`} className="modal">
-        <div className="flex flex-col p-0 w-full h-full max-h-full min-[512px]:h-[90%] rounded-none min-[512px]:rounded-xl modal-box">
+      <dialog id={`property-modal-${id}`} className="transition-none modal">
+        <div className="flex flex-col p-0 w-full h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden">
           <div className="flex justify-between items-center m-2">
-            <div className="pl-2 text-xl btn btn-ghost">
+            <div className="pl-2 text-xl cursor-default hover:bg-white btn btn-ghost no-animation">
               <div>
                 <img src={Logo} alt="logo" className="w-10" />
               </div>
               <div className="">AcmeHome</div>
             </div>
             <form method="dialog">
-              <button className="btn">Close</button>
+              <button className="btn" onClick={sliderReset}>
+                Close
+              </button>
             </form>
           </div>
           <div className="flex items-center p-6 pt-4">
-            <h3 className="flex-1 pr-1 text-xl font-bold drop-shado">
+            <h3 className="flex-1 pr-1 text-xl font-bold">
               {listingType} in{" "}
               <span className="underline decoration-primary">{location}</span>
-              {/* REMOVE FOR PROD */}
-              <span className="ml-4 text-red-500">ID: {id}</span>
             </h3>
             <span className={categoryClass}>{category}</span>
           </div>
 
-          <div
-            className="h-[250px] hero flex-shrink-0"
-            style={{
-              backgroundImage: `url(${img})`,
-            }}
-          ></div>
+          {interiors.length > 0 && (
+            <div className={`overflow-hidden relative flex-shrink-0`}>
+              <Slider
+                ref={carouselRef}
+                {...settings}
+                className="mb-[-20px] mx-[-10px]"
+              >
+                <img
+                  src={img}
+                  alt="House image"
+                  className="h-[300px] object-cover "
+                />
+                {interiors.map((interior, index) => (
+                  <img
+                    key={index}
+                    src={interior}
+                    className="h-[300px] object-cover"
+                    alt={`Interior ${index + 1}`}
+                  />
+                ))}
+              </Slider>
+              <div className="absolute left-2 top-[150px] z-10 drop-shadow">
+                <PrevArrow
+                  onClick={() => carouselRef.current.slickPrev()}
+                  btnType="btn-ghost"
+                  color="text-white"
+                  className="drop-shadow"
+                />
+              </div>
+              <div className="absolute right-2 top-[150px] z-10 drop-shadow">
+                <NextArrow
+                  onClick={() => carouselRef.current.slickNext()}
+                  btnType="btn-ghost"
+                  color="text-white"
+                  className="drop-shadow"
+                />
+              </div>
+            </div>
+          )}
+
+          {interiors.length == 0 && (
+            <img
+              src={img}
+              alt="House image"
+              className="h-[300px] object-cover"
+            />
+          )}
 
           <div className="gap-0 p-0 card-body">
             <div className="flex items-center p-6">
               <p className="text-xl font-bold">{price}</p>
+              {/* REMOVE FOR PROD */}
+              <span className="text-red-500">ID: {id}</span>
               <p className="text-right opacity-90 text-[15px]">{location}</p>
             </div>
 
@@ -146,7 +217,7 @@ const Card = ({ house }) => {
               <div className="flex m-2 space-x-2 w-full">
                 <label className="swap">
                   <input type="checkbox" />
-                  <div className="swap-on">
+                  <div className="transition-none swap-on">
                     <svg
                       viewBox="0 0 24 24"
                       fill="#fc453f"
@@ -164,7 +235,7 @@ const Card = ({ house }) => {
                       />
                     </svg>
                   </div>
-                  <div className="swap-off">
+                  <div className="transition-none swap-off">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -183,7 +254,6 @@ const Card = ({ house }) => {
                     </svg>
                   </div>
                 </label>
-
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
