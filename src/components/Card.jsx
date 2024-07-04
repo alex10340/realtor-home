@@ -32,6 +32,7 @@ const Card = ({ house, toggleModal }) => {
 
   const openModal = () => {
     toggleModal();
+    console.log({ id });
     document.getElementById(`property-modal-${id}`).showModal();
   };
 
@@ -106,7 +107,7 @@ const Card = ({ house, toggleModal }) => {
       {/* Modal */}
 
       <dialog id={`property-modal-${id}`} className="transition-none modal">
-        <div className="flex flex-col p-0 w-full h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden">
+        <div className="flex flex-col p-0 h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden w-[100vw] ">
           <div className="flex justify-between items-center m-2">
             <div className="pl-2 text-xl cursor-default hover:bg-white btn btn-ghost no-animation">
               <div>
@@ -138,7 +139,7 @@ const Card = ({ house, toggleModal }) => {
                 <img
                   src={img}
                   alt="House image"
-                  className="h-[300px] object-cover "
+                  className="h-[300px] object-cover"
                 />
                 {interiors.map((interior, index) => (
                   <img
@@ -149,19 +150,19 @@ const Card = ({ house, toggleModal }) => {
                   />
                 ))}
               </Slider>
-              <div className="absolute left-2 top-[150px] z-10 drop-shadow">
+              <div className="absolute left-4 top-[150px] z-10 drop-shadow">
                 <PrevArrow
                   onClick={() => carouselRef.current.slickPrev()}
-                  btnType="btn-ghost"
-                  color="text-white"
+                  btnType="btn-circle"
+                  color="text-neutral"
                   className="drop-shadow"
                 />
               </div>
-              <div className="absolute right-2 top-[150px] z-10 drop-shadow">
+              <div className="absolute right-4 top-[150px] z-10 drop-shadow">
                 <NextArrow
                   onClick={() => carouselRef.current.slickNext()}
-                  btnType="btn-ghost"
-                  color="text-white"
+                  btnType="btn-circle"
+                  color="text-neutral"
                   className="drop-shadow"
                 />
               </div>
@@ -179,8 +180,7 @@ const Card = ({ house, toggleModal }) => {
           <div className="gap-0 p-0 card-body">
             <div className="flex items-center p-6">
               <p className="text-xl font-bold">{price}</p>
-              {/* REMOVE FOR PROD */}
-              <span className="text-red-500">ID: {id}</span>
+
               <p className="text-right opacity-90 text-[15px]">{location}</p>
             </div>
 
