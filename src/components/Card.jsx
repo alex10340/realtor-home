@@ -134,7 +134,7 @@ const Card = ({ house, toggleModal }) => {
               <Slider
                 ref={carouselRef}
                 {...settings}
-                className="mb-[-20px] mx-[-10px]"
+                className="mb-[-20px] mx-[-10px] sm:w-[532px]"
               >
                 <img
                   src={img}
