@@ -4,8 +4,8 @@ const FindAgent = () => {
   return (
     <div className="sm:py-10 px-[12px] mx-auto max-w-[1350px]">
       <div className="flex justify-center">
-        <div className="hidden sm:block  m-[10px]">
-          <figure className="overflow-hidden rounded-2xl shadow-xl -rotate-1 max-w-96">
+        <div className="hidden sm:block m-[10px]">
+          <figure className="overflow-hidden rounded-2xl shadow-xl -rotate-1 max-w-[400px]">
             <img src={FindAgentImg} alt="Find agent" />
           </figure>
         </div>
@@ -30,42 +30,14 @@ const FindAgent = () => {
               property, our dedicated agents are committed to providing
               exceptional service tailored to your needs.
             </p>
-            <div className="hidden sm:block">
-              <h3>Why Choose Us?</h3>
-              <ul>
-                <li>
-                  <p>
-                    <strong>Expertise:</strong> Our agents have in-depth
-                    knowledge of the local market and trends.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Personalized Service: </strong> We take the time to
-                    understand your unique requirements.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Proven Track Record: </strong> We have successfully
-                    helped numerous clients achieve their real estate goals.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Local Insights: </strong> Gain insights into
-                    neighborhoods, schools, and amenities.
-                  </p>
-                </li>
-              </ul>
-            </div>
 
-            <h2>Get Started Now</h2>
+            <h2 className="">Get Started Now</h2>
             <p className="hidden sm:block">
               Contact us to connect with one of our friendly agents who will
               guide you through the process with professionalism and care. Your
               perfect property or buyer is just a call away!
             </p>
+
             <button className="text-white btn btn-wide btn-primary">
               Contact us
             </button>
