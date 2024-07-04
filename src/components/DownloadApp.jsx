@@ -17,7 +17,7 @@ const DownloadApp = () => {
               Download the{" "}
               <span className="underline text-neutral">AcmeHome app</span>
             </h2>
-            <div className="p-8 sm:hidden max-w-[300px] m-[10px]">
+            <div className="p-8 sm:hidden max-w-[300px] m-[10px] mx-auto">
               <figure className="overflow-hidden rounded-2xl drop-shadow-xl -rotate-1">
                 <img src={PhoneScreenshot} alt="Find agent" />
               </figure>
