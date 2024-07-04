@@ -5,7 +5,3 @@
 .slick-slide {
   padding: 0px 10px 20px; /* Adjust based on your shadow size */
 }
-
-.slick-track {
-  display: flex;
-}
