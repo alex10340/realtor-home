@@ -38,6 +38,7 @@ const Card = ({ house, toggleModal }) => {
   const carouselRef = useRef(null);
 
   const sliderReset = () => {
+    toggleModal();
     if (carouselRef.current) carouselRef.current.slickGoTo(0);
   };
 
