@@ -3,21 +3,19 @@ import FindAgentImg from "../assets/findagent.jpg";
 const FindAgent = () => {
   return (
     <div className="sm:py-10 px-[12px] mx-auto max-w-[1350px]">
-      <div className="flex justify-center">
-        <div className="hidden sm:block  m-[10px]">
-          <figure className="overflow-hidden rounded-2xl shadow-xl -rotate-1 max-w-96">
+      <div className="flex">
+        <div className="hidden sm:block w-[40vw] max-w-[600px] m-[10px]">
+          <figure className="overflow-hidden aspect-[12/16] rounded-2xl shadow-xl -rotate-1">
             <img src={FindAgentImg} alt="Find agent" />
           </figure>
         </div>
-
-        <div className="px-10 py-5 sm:py-10">
+        <div className="py-5 px-10 sm:py-10 sm:w-[60vw]">
           <h2 className="mb-3 text-4xl font-bold text-center sm:text-left">
             Find your agent{" "}
             <span className="underline text-neutral">today</span>
           </h2>
-
           <div className="p-6 sm:hidden">
-            <figure className="overflow-hidden rounded-2xl shadow-xl rotate-1">
+            <figure className="overflow-hidden aspect-[12/16] rounded-2xl shadow-xl rotate-1">
               <img src={FindAgentImg} alt="Find agent" />
             </figure>
           </div>
