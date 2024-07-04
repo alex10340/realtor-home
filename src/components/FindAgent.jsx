@@ -49,7 +49,7 @@ const FindAgent = () => {
                 </p>
               </li>
             </ul>
-            <h3>Get Started Today</h3>
+            <h2 className="">Get Started Now</h2>
             <p>
               Contact us to connect with one of our friendly agents who will
               guide you through the process with professionalism and care. Your
