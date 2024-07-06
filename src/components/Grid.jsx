@@ -7,9 +7,11 @@ const Grid = () => {
       <h3 className="p-2 pt-0 pb-4 text-2xl font-normal">Most popular areas</h3>
       <div className="grid grid-cols sm:grid-cols-2 min-[1200px]:grid-cols-3">
         {locations.map((location) => (
-          <div key={location.id}>
-            <GridItem img={location.img} location={location.name} />
-          </div>
+          <GridItem
+            key={location.id}
+            img={location.img}
+            location={location.name}
+          />
         ))}
       </div>
     </div>
