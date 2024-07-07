@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -58,7 +58,7 @@ const Navbar = () => {
               onClick={scrollToTop}
             >
               <div>
-                <img src={Logo} alt="logo" className="w-10" />
+                <img src={logo} alt="logo" className="w-10" />
               </div>
               <div className="">AcmeHome</div>
             </Link>

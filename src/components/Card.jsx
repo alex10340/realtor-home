@@ -1,12 +1,14 @@
 import { useRef } from "react";
-import Logo from "../assets/logo.png";
 import classNames from "classnames";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import PrevArrow from "./carousel arrows/PrevArrow";
 import NextArrow from "./carousel arrows/NextArrow";
+
+import logo from "../assets/logo.png";
 
 const Card = ({ house, toggleModal }) => {
   const {
@@ -111,7 +113,7 @@ const Card = ({ house, toggleModal }) => {
           <div className="flex justify-between items-center m-2">
             <div className="pl-2 text-xl cursor-default hover:bg-white btn btn-ghost no-animation">
               <div>
-                <img src={Logo} alt="logo" className="w-10" />
+                <img src={logo} alt="logo" className="w-10" />
               </div>
               <div className="">AcmeHome</div>
             </div>

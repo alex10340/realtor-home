@@ -1,6 +1,5 @@
-import Logo from "../assets/logo.png";
-import PhoneScreenshot from "../assets/phonescreenshot.png";
-import AppStores from "../assets/appstores.png";
+import phoneScreenshot from "../assets/phonescreenshot.png";
+import appStores from "../assets/appstores.png";
 
 const DownloadApp = () => {
   return (
@@ -9,7 +8,7 @@ const DownloadApp = () => {
         <div className="flex mx-auto">
           <div className="hidden sm:block max-w-[300px] m-[10px]">
             <figure className="overflow-hidden rounded-2xl drop-shadow-xl -rotate-1">
-              <img src={PhoneScreenshot} alt="Find agent" />
+              <img src={phoneScreenshot} alt="Find agent" />
             </figure>
           </div>
           <div className="px-10 py-10">
@@ -19,7 +18,7 @@ const DownloadApp = () => {
             </h2>
             <div className="p-8 sm:hidden max-w-[300px] m-[10px] mx-auto">
               <figure className="overflow-hidden rounded-2xl drop-shadow-xl -rotate-1">
-                <img src={PhoneScreenshot} alt="Find agent" />
+                <img src={phoneScreenshot} alt="Find agent" />
               </figure>
             </div>
             <div className="py-5 pt-0 opacity-85 prose">
@@ -34,7 +33,7 @@ const DownloadApp = () => {
               </p>
               <h3>Available on the App Store and Google Play.</h3>
               <img
-                src={AppStores}
+                src={appStores}
                 alt="google play and apple store logo"
                 className="mt-10 w-64 cursor-pointer"
               />
