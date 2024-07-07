@@ -215,7 +215,11 @@ const Card = ({ house, toggleModal }) => {
               </div>
             </div>
 
-            <p className="flex-1 p-6 shadow-inner opacity-90">{desc}</p>
+            <p className="p-6 pb-0 font-bold underline underline-offset-4 text-neutral">
+              Description
+            </p>
+            <p className="flex-1 p-6 opacity-90">{desc}</p>
+
             <div className="sticky w-full h-16 bottom-0 bg-base-100 flex z-[1000] shadow-[0_12px_24px_0_rgba(0,0,0,0.5)]">
               <div className="flex m-2 space-x-2 w-full">
                 <label className="swap">
