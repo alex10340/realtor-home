@@ -1,14 +1,12 @@
 import { useRef } from "react";
 import classNames from "classnames";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import PrevArrow from "./carousel arrows/PrevArrow";
 import NextArrow from "./carousel arrows/NextArrow";
-
 import logo from "../assets/logo.png";
+import { useFavorites } from "../context/FavoritesContext";
 
 const Card = ({ house, toggleModal }) => {
   const {
@@ -24,6 +22,14 @@ const Card = ({ house, toggleModal }) => {
     desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deleniti tempore, voluptatem id, eaque fuga dolorum voluptatibus, laudantium nihil praesentium obcaecati facilis amet dicta nulla velit suscipit dolorem optio possimus voluptates! Sapiente nesciunt, facere odio, incidunt ipsa totam quaerat porro sed laborum nam obcaecati numquam at alias atque? Alias, illo?",
   } = house;
 
+  const { favoriteIds, addFavorite, removeFavorite } = useFavorites(); // Use the hook
+  const isFavorited = favoriteIds.includes(id); // Check if the house is favorited
+
+  const toggleFavorite = () => {
+    isFavorited ? removeFavorite(id) : addFavorite(id);
+    console.log(isFavorited);
+  };
+
   const categoryClass = classNames(
     "p-2 text-sm font-bold text-white rounded-full shadow",
     {
@@ -32,13 +38,13 @@ const Card = ({ house, toggleModal }) => {
     }
   );
 
+  const carouselRef = useRef(null);
+
   const openModal = () => {
     toggleModal();
     console.log({ id });
     document.getElementById(`property-modal-${id}`).showModal();
   };
-
-  const carouselRef = useRef(null);
 
   const sliderReset = () => {
     toggleModal();
@@ -224,45 +230,49 @@ const Card = ({ house, toggleModal }) => {
 
             <div className="sticky w-full h-16 bottom-0 bg-base-100 flex z-[1000] shadow-[0_12px_24px_0_rgba(0,0,0,0.5)]">
               <div className="flex m-2 space-x-2 w-full">
-                <label className="swap">
-                  <input type="checkbox" />
-                  <div className="transition-none swap-on">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="#fc453f"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="p-1 w-12 h-12 btn"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                        stroke="#fc453f"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div className="transition-none swap-off">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="p-1 w-12 h-12 btn"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                        stroke="#363f4b"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </label>
+                <button className="">
+                  {isFavorited ? (
+                    <div onClick={toggleFavorite}>
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="#fc453f"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="p-1 w-12 h-12 btn"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                          stroke="#fc453f"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  ) : (
+                    <div onClick={toggleFavorite}>
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="p-1 w-12 h-12 btn"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                          stroke="#363f4b"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </button>
+
+                {/* share icon */}
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"

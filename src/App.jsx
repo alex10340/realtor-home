@@ -7,16 +7,20 @@ import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import Showroom from "./pages/Showroom";
 
+import { FavoritesProvider } from "./context/FavoritesContext";
+
 const App = () => {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/agencies" element={<Agencies />} />
-        <Route path="/saved" element={<Saved />} />
-        <Route path="/showroom" element={<Showroom />} />
-      </Routes>
+      <FavoritesProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/agencies" element={<Agencies />} />
+          <Route path="/saved" element={<Saved />} />
+          <Route path="/showroom" element={<Showroom />} />
+        </Routes>
+      </FavoritesProvider>
       <Footer />
     </>
   );

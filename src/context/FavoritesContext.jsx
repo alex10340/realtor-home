@@ -1,9 +1,7 @@
 import { createContext, useState, useContext } from "react";
 
-// Create a context
 const FavoritesContext = createContext();
 
-// Create a provider component
 export const FavoritesProvider = ({ children }) => {
   const [favoriteIds, setFavoriteIds] = useState([]);
 
