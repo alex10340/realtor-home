@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const Navbar = () => {
   return (
@@ -27,38 +32,52 @@ const Navbar = () => {
               className="shadow-xl space-y-1 menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="p-2">Locations</a>
+                <Link to={"/saved"} className="p-2">
+                  Saved
+                </Link>
               </li>
               <li>
-                <a className="p-2">Agencies</a>
+                <Link to={"/agencies"} className="p-2">
+                  Agencies
+                </Link>
               </li>
               <li>
-                <a className="p-2 text-white bg-primary hover:bg-secondary glass">
+                <Link
+                  to={"/showroom"}
+                  className="p-2 text-white bg-primary hover:bg-secondary glass"
+                >
                   Showroom
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="flex-1 justify-center sm:justify-normal">
-            <a className="pl-2 text-xl btn btn-ghost" href="#">
+            <Link
+              to={"/"}
+              className="pl-2 text-xl btn btn-ghost"
+              onClick={scrollToTop}
+            >
               <div>
                 <img src={Logo} alt="logo" className="w-10" />
               </div>
               <div className="">AcmeHome</div>
-            </a>
+            </Link>
           </div>
           <div className="flex-none gap-2 pr-2">
             <ul className="hidden space-x-2 menu menu-horizontal sm:flex">
               <li>
-                <a>Locations</a>
+                <Link to={"/saved"}>Saved</Link>
               </li>
               <li>
-                <a>Agencies</a>
+                <Link to={"/agencies"}>Agencies</Link>
               </li>
               <li>
-                <a className="mx-2 text-white bg-primary hover:bg-secondary glass">
+                <Link
+                  to={"/showroom"}
+                  className="mx-2 text-white bg-primary hover:bg-secondary glass"
+                >
                   Showroom
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="dropdown dropdown-end">

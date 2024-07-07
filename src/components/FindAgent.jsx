@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FindAgentImg from "../assets/findagent.jpg";
 
 const FindAgent = () => {
@@ -33,14 +34,17 @@ const FindAgent = () => {
 
             <h2 className="">Get Started Now</h2>
             <p className="hidden sm:block">
-              Contact us to connect with one of our friendly agents who will
-              guide you through the process with professionalism and care. Your
-              perfect property or buyer is just a call away!
+              Connect with one of our friendly agents who will guide you through
+              the process with professionalism and care. Your perfect property
+              or buyer is just a call away!
             </p>
 
-            <button className="text-white btn btn-wide btn-primary">
-              Contact us
-            </button>
+            <Link
+              to={"/agencies"}
+              className="text-white shadow-lg btn btn-wide btn-primary"
+            >
+              Browse Agencies
+            </Link>
           </div>
         </div>
       </div>

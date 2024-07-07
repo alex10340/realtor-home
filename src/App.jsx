@@ -1,21 +1,23 @@
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Carousel from "./components/Carousel";
-import Grid from "./components/Grid";
-import FindAgent from "./components/FindAgent";
-import DownloadApp from "./components/DownloadApp";
 import Footer from "./components/Footer";
+
+import Agencies from "./pages/Agencies";
+import Home from "./pages/Home";
+import Saved from "./pages/Saved";
+import Showroom from "./pages/Showroom";
 
 const App = () => {
   return (
     <>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <Carousel></Carousel>
-      <Grid></Grid>
-      <FindAgent></FindAgent>
-      <DownloadApp></DownloadApp>
-      <Footer></Footer>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/agencies" element={<Agencies />} />
+        <Route path="/saved" element={<Saved />} />
+        <Route path="/showroom" element={<Showroom />} />
+      </Routes>
+      <Footer />
     </>
   );
 };
