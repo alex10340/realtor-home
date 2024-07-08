@@ -8,7 +8,7 @@ import NextArrow from "./carousel arrows/NextArrow";
 import logo from "../assets/logo.png";
 import { useFavorites } from "../context/FavoritesContext";
 
-const Card = ({ house, toggleModal }) => {
+const Card = ({ house, toggleModal = () => {} }) => {
   const {
     id,
     img,
