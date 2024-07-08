@@ -11,18 +11,21 @@ import { FavoritesProvider } from "./context/FavoritesContext";
 
 const App = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <FavoritesProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/agencies" element={<Agencies />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/showroom" element={<Showroom />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/agencies" element={<Agencies />} />
+            <Route path="/saved" element={<Saved />} />
+            <Route path="/showroom" element={<Showroom />} />
+          </Routes>
+        </div>
       </FavoritesProvider>
       <Footer />
-    </>
+    </div>
   );
 };
+
 export default App;
