@@ -66,14 +66,19 @@ const Navbar = () => {
           <div className="flex-none gap-2 pr-2">
             <ul className="hidden space-x-2 menu menu-horizontal sm:flex">
               <li>
-                <Link to={"/saved"}>Saved</Link>
+                <Link to={"/saved"} onClick={scrollToTop}>
+                  Saved
+                </Link>
               </li>
               <li>
-                <Link to={"/agencies"}>Agencies</Link>
+                <Link to={"/agencies"} onClick={scrollToTop}>
+                  Agencies
+                </Link>
               </li>
               <li>
                 <Link
                   to={"/showroom"}
+                  onClick={scrollToTop}
                   className="mx-2 text-white bg-primary hover:bg-secondary glass"
                 >
                   Showroom
