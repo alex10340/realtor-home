@@ -2,10 +2,11 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PrevArrow from "./carousel arrows/PrevArrow";
-import NextArrow from "./carousel arrows/NextArrow";
 import logo from "../assets/logo.png";
 import classNames from "classnames";
+
+import { NextArrow, PrevArrow } from "./carousel arrows/CarouselArrows";
+import { FavoriteOn, FavoriteOff } from "./favorite icons/FavoriteIcons";
 
 const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
   const {
@@ -138,18 +139,8 @@ const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
 
           <div className="sticky w-full h-16 bottom-0 bg-base-100 flex z-[1000] shadow-[0_12px_24px_0_rgba(0,0,0,0.5)]">
             <div className="flex m-2 space-x-2 w-full">
-              <button className="btn">
-                {isFavorited ? (
-                  <div onClick={toggleFavorite}>
-                    {/* SVG Icon Placeholder for Favorited */}
-                    Favorited!
-                  </div>
-                ) : (
-                  <div onClick={toggleFavorite}>
-                    {/* SVG Icon Placeholder for Not Favorited */}
-                    Not favorited!
-                  </div>
-                )}
+              <button className="" onClick={toggleFavorite}>
+                {isFavorited ? <FavoriteOn /> : <FavoriteOff />}
               </button>
               {/* Share Icon Placeholder */}
               <button className="flex-1 text-white btn btn-primary">

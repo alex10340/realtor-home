@@ -17,7 +17,7 @@ const Card = ({ house, toggleModal = () => {} }) => {
 
   const toggleFavorite = () => {
     isFavorited ? removeFavorite(id) : addFavorite(id);
-    console.log(isFavorited);
+    console.log(!isFavorited);
   };
 
   const openModal = () => {
