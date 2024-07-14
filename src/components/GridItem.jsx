@@ -8,7 +8,7 @@ const GridItem = ({ img, location }) => {
           alt="Location Image"
         />
 
-        <div className=" flex items-center justify-between absolute w-[100%] px-8">
+        <div className="flex items-center justify-between absolute w-[100%] px-8">
           <h3 className="pr-4 text-xl font-medium text-white drop-shadow-md">
             {location}
           </h3>

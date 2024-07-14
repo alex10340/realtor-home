@@ -4,7 +4,7 @@ import appStores from "../assets/appstores.png";
 const DownloadApp = () => {
   return (
     <div className="bg-base-200">
-      <div className="sm:py-10 px-[12px] mx-auto max-w-[1350px] flex justify-center">
+      <div className="sm:py-10 sm:px-12 mx-auto max-w-[1350px] flex justify-center">
         <div className="flex mx-auto">
           <div className="hidden sm:block max-w-[300px] m-[10px]">
             <figure className="overflow-hidden rounded-2xl drop-shadow-xl -rotate-1">
@@ -12,7 +12,7 @@ const DownloadApp = () => {
             </figure>
           </div>
           <div className="px-10 py-10">
-            <h2 className="mb-2 text-4xl font-bold text-center sm:text-left">
+            <h2 className="mb-3 text-4xl font-bold text-center sm:text-left">
               Download the{" "}
               <span className="underline text-neutral">AcmeHome app</span>
             </h2>

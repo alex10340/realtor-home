@@ -92,21 +92,21 @@ const PropertyModal = ({ house, toggleModal }) => {
               <img
                 src={img}
                 alt="House image"
-                className="h-[300px] object-cover"
+                className="h-[340px] object-cover"
                 loading="lazy"
               />
               {interiors.map((interior, index) => (
                 <img
                   key={index}
                   src={interior}
-                  className="h-[300px] object-cover"
+                  className="h-[340px] object-cover"
                   alt={`Interior ${index + 1}`}
                   loading="lazy"
                 />
               ))}
             </Slider>
 
-            <div className="absolute left-4 top-[150px] z-10 drop-shadow">
+            <div className="absolute left-4 top-[146px] z-10 drop-shadow">
               <PrevArrow
                 onClick={() => carouselRef.current.slickPrev()}
                 btnType="btn-circle"
@@ -114,7 +114,7 @@ const PropertyModal = ({ house, toggleModal }) => {
                 className="drop-shadow"
               />
             </div>
-            <div className="absolute right-4 top-[150px] z-10 drop-shadow">
+            <div className="absolute right-4 top-[146px] z-10 drop-shadow">
               <NextArrow
                 onClick={() => carouselRef.current.slickNext()}
                 btnType="btn-circle"
@@ -124,7 +124,12 @@ const PropertyModal = ({ house, toggleModal }) => {
             </div>
           </div>
         ) : (
-          <img src={img} alt="House image" className="h-[300px] object-cover" />
+          <img
+            src={img}
+            alt="House image"
+            className="h-[340px] object-cover"
+            loading="lazy"
+          />
         )}
 
         <div className="flex overflow-hidden flex-col flex-1 gap-0 p-0 card-body">

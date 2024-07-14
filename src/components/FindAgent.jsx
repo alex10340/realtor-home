@@ -3,7 +3,7 @@ import FindAgentImg from "../assets/findagent.jpg";
 
 const FindAgent = () => {
   return (
-    <div className="sm:py-10 px-[12px] mx-auto max-w-[1350px]">
+    <div className="sm:py-10 px-12 mx-auto max-w-[1350px]">
       <div className="flex justify-center">
         <div className="hidden sm:block m-[10px]">
           <figure className="overflow-hidden rounded-2xl shadow-xl -rotate-1 max-w-[400px]">
@@ -11,7 +11,7 @@ const FindAgent = () => {
           </figure>
         </div>
 
-        <div className="px-10 py-5 sm:py-10">
+        <div className="py-5 sm:px-10 sm:py-10">
           <h2 className="mb-3 text-4xl font-bold text-center sm:text-left">
             Find your agent{" "}
             <span className="underline text-neutral">today</span>
@@ -23,7 +23,7 @@ const FindAgent = () => {
             </figure>
           </div>
 
-          <div className="py-5 opacity-85 prose">
+          <div className="py-5 pt-0 opacity-85 prose">
             <p>
               Looking to buy or sell a property? Our experienced team of real
               estate agents is here to help you every step of the way. Whether
@@ -33,7 +33,7 @@ const FindAgent = () => {
             </p>
 
             <h2 className="">Get Started Now</h2>
-            <p className="hidden sm:block">
+            <p className="hidden md:block">
               Connect with one of our friendly agents who will guide you through
               the process with professionalism and care. Your perfect property
               or buyer is just a call away!
