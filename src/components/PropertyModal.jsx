@@ -125,13 +125,13 @@ const PropertyModal = ({ house, toggleModal }) => {
           <img src={img} alt="House image" className="h-[300px] object-cover" />
         )}
 
-        <div className="gap-0 p-0 card-body">
+        <div className="flex overflow-hidden flex-col flex-1 gap-0 p-0 card-body">
           <div className="flex items-center p-6">
             <p className="text-xl font-bold">{price}</p>
             <p className="text-right opacity-90 text-[15px]">{location}</p>
           </div>
 
-          <div className="flex px-6 py-2 font-medium shadow bg-neutral-content text-neutral">
+          <div className="flex px-6 py-2 font-medium bg-neutral-content text-neutral">
             <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
@@ -141,12 +141,12 @@ const PropertyModal = ({ house, toggleModal }) => {
             </div>
           </div>
 
-          <div className="flex-1">
-            <div className="overflow-auto h-[200px]">
-              <p className="p-6 font-bold underline underline-offset-4 text-neutral">
-                Description
-              </p>
-              <p className="p-6 pt-0 opacity-90">{desc}</p>
+          <div className="overflow-auto flex-1">
+            <p className="p-6 pb-0 font-bold underline underline-offset-4 text-neutral">
+              Description
+            </p>
+            <div className="p-6 opacity-90">
+              <p>{desc}</p>
             </div>
           </div>
 
