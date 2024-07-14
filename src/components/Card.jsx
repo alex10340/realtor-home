@@ -1,5 +1,5 @@
 import PropertyModal from "./PropertyModal";
-import { useFavorites } from "../context/FavoritesContext";
+import { FaBed, FaBath } from "react-icons/fa6";
 
 const Card = ({ house, toggleModal = () => {} }) => {
   const {
@@ -11,14 +11,6 @@ const Card = ({ house, toggleModal = () => {} }) => {
     bedrooms = "-",
     bathrooms = "-",
   } = house;
-
-  const { favoriteIds, addFavorite, removeFavorite } = useFavorites();
-  const isFavorited = favoriteIds.includes(id);
-
-  const toggleFavorite = () => {
-    isFavorited ? removeFavorite(id) : addFavorite(id);
-    console.log(!isFavorited);
-  };
 
   const openModal = () => {
     toggleModal();
@@ -49,20 +41,16 @@ const Card = ({ house, toggleModal = () => {} }) => {
             <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
-              {/* SVG Icon Placeholder */}
+              <FaBed />
+
               <div>{bathrooms}</div>
-              {/* SVG Icon Placeholder */}
+              <FaBath />
             </div>
           </div>
         </div>
       </div>
 
-      <PropertyModal
-        house={house}
-        toggleModal={toggleModal}
-        isFavorited={isFavorited}
-        toggleFavorite={toggleFavorite}
-      />
+      <PropertyModal house={house} toggleModal={toggleModal} />
     </>
   );
 };

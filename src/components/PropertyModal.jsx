@@ -7,8 +7,11 @@ import classNames from "classnames";
 
 import { NextArrow, PrevArrow } from "./carousel arrows/CarouselArrows";
 import { FavoriteOn, FavoriteOff } from "./favorite icons/FavoriteIcons";
+import { useFavorites } from "../context/FavoritesContext";
+import { FaBed, FaBath, FaShareNodes } from "react-icons/fa6";
+import { LuShare2 } from "react-icons/lu";
 
-const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
+const PropertyModal = ({ house, toggleModal }) => {
   const {
     id,
     img,
@@ -22,11 +25,12 @@ const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
     desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus deleniti tempore, voluptatem id, eaque fuga dolorum voluptatibus, laudantium nihil praesentium obcaecati facilis amet dicta nulla velit suscipit dolorem optio possimus voluptates! Sapiente nesciunt, facere odio, incidunt ipsa totam quaerat porro sed laborum nam obcaecati numquam at alias atque? Alias, illo?",
   } = house;
 
-  const carouselRef = useRef(null);
+  const { favoriteIds, addFavorite, removeFavorite } = useFavorites();
+  const isFavorited = favoriteIds.includes(id);
 
-  const sliderReset = () => {
-    toggleModal();
-    if (carouselRef.current) carouselRef.current.slickGoTo(0);
+  const toggleFavorite = () => {
+    isFavorited ? removeFavorite(id) : addFavorite(id);
+    console.log(!isFavorited);
   };
 
   const categoryClass = classNames(
@@ -36,6 +40,13 @@ const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
       "bg-yellow-500": category === "Collection",
     }
   );
+
+  const carouselRef = useRef(null);
+
+  const sliderReset = () => {
+    toggleModal();
+    if (carouselRef.current) carouselRef.current.slickGoTo(0);
+  };
 
   const settings = {
     infinite: true,
@@ -124,9 +135,9 @@ const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
             <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
-              {/* SVG Icon Placeholder */}
+              <FaBed />
               <div>{bathrooms}</div>
-              {/* SVG Icon Placeholder */}
+              <FaBath />
             </div>
           </div>
 
@@ -142,7 +153,7 @@ const PropertyModal = ({ house, toggleModal, isFavorited, toggleFavorite }) => {
               <button className="" onClick={toggleFavorite}>
                 {isFavorited ? <FavoriteOn /> : <FavoriteOff />}
               </button>
-              {/* Share Icon Placeholder */}
+              <LuShare2 className="p-[0.4rem] w-12 h-12 btn" />
               <button className="flex-1 text-white btn btn-primary">
                 <p className="px-8">Contact Agent</p>
               </button>
