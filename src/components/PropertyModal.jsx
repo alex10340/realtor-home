@@ -142,10 +142,10 @@ const PropertyModal = ({ house, toggleModal }) => {
           </div>
 
           <div className="flex-1">
-            <p className="p-6 font-bold underline underline-offset-4 text-neutral">
-              Description
-            </p>
             <div className="overflow-auto h-[200px]">
+              <p className="p-6 font-bold underline underline-offset-4 text-neutral">
+                Description
+              </p>
               <p className="p-6 pt-0 opacity-90">{desc}</p>
             </div>
           </div>
