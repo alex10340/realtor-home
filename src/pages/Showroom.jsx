@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 import { houses } from "../data/allData";
 import Card from "../components/Card";
 
@@ -7,7 +8,7 @@ const Showroom = () => {
     <div className="px-8 mx-auto max-w-[1350px] mb-10">
       <div className="flex gap-4 items-center my-12">
         <h1 className="flex-1 text-3xl font-bold lg:text-4xl">Showroom</h1>
-        <Link to="/" className="shadow btn">
+        <Link to="/" className="shadow btn" onClick={scrollToTop}>
           Return
         </Link>
       </div>

@@ -79,7 +79,9 @@ const PropertyModal = ({ house, toggleModal }) => {
             {listingType} in{" "}
             <span className="underline decoration-primary">{location}</span>
           </h3>
-          <span className={categoryClass}>{category}</span>
+          {category !== "None" && (
+            <span className={categoryClass}>{category}</span>
+          )}
         </div>
 
         {interiors.length > 0 ? (

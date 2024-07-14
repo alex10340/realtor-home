@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+import { scrollToTop } from "../utils/scrollToTop";
 
 const Navbar = () => {
   return (
@@ -32,12 +29,12 @@ const Navbar = () => {
               className="shadow-xl space-y-1 menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to={"/saved"} className="p-2">
+                <Link to={"/saved"} className="p-2" onClick={scrollToTop}>
                   Saved
                 </Link>
               </li>
               <li>
-                <Link to={"/agencies"} className="p-2">
+                <Link to={"/agencies"} className="p-2" onClick={scrollToTop}>
                   Agencies
                 </Link>
               </li>
@@ -45,6 +42,7 @@ const Navbar = () => {
                 <Link
                   to={"/showroom"}
                   className="p-2 text-white bg-primary hover:bg-secondary glass"
+                  onClick={scrollToTop}
                 >
                   Showroom
                 </Link>

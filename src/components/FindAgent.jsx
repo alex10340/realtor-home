@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
+
 import FindAgentImg from "../assets/findagent.jpg";
 
 const FindAgent = () => {
@@ -42,6 +44,7 @@ const FindAgent = () => {
             <Link
               to={"/agencies"}
               className="text-white shadow-lg btn btn-wide btn-primary"
+              onClick={scrollToTop}
             >
               Browse Agencies
             </Link>

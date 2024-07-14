@@ -1,6 +1,7 @@
 import { useFavorites } from "../context/FavoritesContext";
 import { houses } from "../data/allData";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 import Card from "../components/Card";
 
 const Saved = () => {
@@ -15,7 +16,7 @@ const Saved = () => {
         <h1 className="flex-1 text-3xl font-bold lg:text-4xl">
           Saved Listings
         </h1>
-        <Link to="/" className="shadow btn">
+        <Link to="/" className="shadow btn" onClick={scrollToTop}>
           Return
         </Link>
       </div>
