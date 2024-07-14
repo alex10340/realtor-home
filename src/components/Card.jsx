@@ -1,5 +1,5 @@
 import PropertyModal from "./PropertyModal";
-import { FaBed, FaBath } from "react-icons/fa6";
+import { LuBed, LuBath } from "react-icons/lu";
 
 const Card = ({ house, toggleModal = () => {} }) => {
   const {
@@ -41,10 +41,10 @@ const Card = ({ house, toggleModal = () => {} }) => {
             <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
-              <FaBed />
+              <LuBed />
 
               <div>{bathrooms}</div>
-              <FaBath />
+              <LuBath />
             </div>
           </div>
         </div>

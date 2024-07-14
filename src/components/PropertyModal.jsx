@@ -8,8 +8,7 @@ import classNames from "classnames";
 import { NextArrow, PrevArrow } from "./carousel arrows/CarouselArrows";
 import { FavoriteOn, FavoriteOff } from "./favorite icons/FavoriteIcons";
 import { useFavorites } from "../context/FavoritesContext";
-import { FaBed, FaBath, FaShareNodes } from "react-icons/fa6";
-import { LuShare2 } from "react-icons/lu";
+import { LuShare2, LuBed, LuBath } from "react-icons/lu";
 
 const PropertyModal = ({ house, toggleModal }) => {
   const {
@@ -94,6 +93,7 @@ const PropertyModal = ({ house, toggleModal }) => {
                 src={img}
                 alt="House image"
                 className="h-[300px] object-cover"
+                loading="lazy"
               />
               {interiors.map((interior, index) => (
                 <img
@@ -101,9 +101,11 @@ const PropertyModal = ({ house, toggleModal }) => {
                   src={interior}
                   className="h-[300px] object-cover"
                   alt={`Interior ${index + 1}`}
+                  loading="lazy"
                 />
               ))}
             </Slider>
+
             <div className="absolute left-4 top-[150px] z-10 drop-shadow">
               <PrevArrow
                 onClick={() => carouselRef.current.slickPrev()}
@@ -135,9 +137,9 @@ const PropertyModal = ({ house, toggleModal }) => {
             <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
-              <FaBed />
+              <LuBed />
               <div>{bathrooms}</div>
-              <FaBath />
+              <LuBath />
             </div>
           </div>
 
