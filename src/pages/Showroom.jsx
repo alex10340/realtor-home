@@ -5,7 +5,7 @@ import Card from "../components/Card";
 
 const Showroom = () => {
   return (
-    <div className="px-8 mx-auto max-w-[1350px] mb-10">
+    <div className="px-8 mx-auto max-w-[1350px]">
       <div className="flex gap-4 items-center my-12">
         <h1 className="flex-1 text-3xl font-bold lg:text-4xl">Showroom</h1>
         <Link to="/" className="shadow btn" onClick={scrollToTop}>
@@ -13,7 +13,7 @@ const Showroom = () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px]">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] mb-12">
         {houses.map((house) => (
           <Card key={house.id} house={house} />
         ))}

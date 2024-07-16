@@ -7,7 +7,7 @@ const AgencySection = ({ logo, name, desc }) => {
           <p>AcmeHome {name}</p>
         </div>
         <div className="px-1 pt-5 md:px-10 opacity-85 prose">
-          <p className="pb-5">{desc}</p>
+          <p className="pb-5 text-balance">{desc}</p>
 
           <button className="text-white shadow-lg btn btn-wide btn-primary">
             Contact Agency

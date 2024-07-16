@@ -29,7 +29,7 @@ const Agencies = () => {
         </Link>
       </div>
 
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencyCard img={Location01} className={"hidden md:block"} />
         <AgencySection
           logo={logoEvergreen}
@@ -39,7 +39,7 @@ const Agencies = () => {
             listing your property with personalized service."
         />
       </div>
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencySection
           logo={logoWillowbrook}
           name={"Willowbrook Estates"}
@@ -50,7 +50,7 @@ const Agencies = () => {
         <AgencyCard img={Location02} className={"hidden md:block"} />
       </div>
 
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencyCard img={Location03} className={"hidden md:block"} />
         <AgencySection
           logo={logoMaplewood}
@@ -61,7 +61,7 @@ const Agencies = () => {
         />
       </div>
 
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencySection
           logo={logoCedarview}
           name={"Cedarview Harbor"}
@@ -72,7 +72,7 @@ const Agencies = () => {
         <AgencyCard img={Location04} className={"hidden md:block"} />
       </div>
 
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencyCard img={Location05} className={"hidden md:block"} />
         <AgencySection
           logo={logoSilverleaf}
@@ -83,7 +83,7 @@ const Agencies = () => {
         />
       </div>
 
-      <div className="flex pb-24 xl:px-10">
+      <div className="flex pb-24">
         <AgencySection
           logo={logoMagnolia}
           name={"Magnolia Bay"}
