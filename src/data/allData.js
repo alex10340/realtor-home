@@ -57,8 +57,12 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "3",
-    interiors: [Interiors.Interior03, Interiors.Interior04],
-    // desc:
+    interiors: [
+      Interiors.Interior03,
+      Interiors.Interior04,
+      Interiors.Interior22,
+    ],
+    desc: "Stunning two-story brick home set on a spacious lot surrounded by nature. This 4-bedroom, 3-bathroom property features a charming covered porch and a stylish mix of brick and siding exterior. Inside, enjoy an open floor plan with ample natural light, a modern kitchen with modern appliances, and a cozy living room. The master suite offers a luxurious retreat with a spa-like bathroom. Perfect for families, this home combines elegance with the tranquility of a wooded setting.",
   },
   {
     id: 3,
@@ -124,7 +128,12 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    interiors: [Interiors.Interior30, Interiors.Interior22],
+    interiors: [
+      Interiors.Interior30,
+      Interiors.Interior11,
+      Interiors.Interior12,
+    ],
+    desc: "Charming single-story home featuring a beautiful stone facade and well-maintained landscaping. This 3-bedroom, 2-bathroom residence offers an inviting entrance with a covered porch, leading to a spacious living area. Enjoy the convenience of an attached two-car garage and a private, fenced backyard. Located in a quiet neighborhood, this home provides the perfect blend of comfort and style for families or individuals seeking suburban tranquility.",
   },
   {
     id: 9,
@@ -146,6 +155,7 @@ export const houses = [
     bedrooms: "2",
     bathrooms: "1",
     interiors: [Interiors.Interior31, Interiors.Interior57],
+    desc: "Quaint countryside cottage featuring rustic charm and picturesque surroundings. This 2-bedroom, 1-bathroom home boasts a classic wooden exterior with a cozy front porch perfect for relaxing. The property includes a delightful garden enclosed by a white picket fence, adding to its storybook appeal. Ideal for those seeking a peaceful retreat, this charming home offers a perfect blend of simplicity and natural beauty, nestled in a serene rural setting.",
   },
   {
     id: 11,
