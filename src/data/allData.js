@@ -57,11 +57,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "4",
     bathrooms: "3",
-    interiors: [
-      Interiors.Interior03,
-      Interiors.Interior04,
-      Interiors.Interior22,
-    ],
+    interiors: [Interiors.Interior03, Interiors.Interior04],
     desc: "Stunning two-story brick home set on a spacious lot surrounded by nature. This 4-bedroom, 3-bathroom property features a charming covered porch and a stylish mix of brick and siding exterior. Inside, enjoy an open floor plan with ample natural light, a modern kitchen with modern appliances, and a cozy living room. The master suite offers a luxurious retreat with a spa-like bathroom. Perfect for families, this home combines elegance with the tranquility of a wooded setting.",
   },
   {
@@ -85,7 +81,7 @@ export const houses = [
     listingType: "For sale",
     bedrooms: "3",
     bathrooms: "2",
-    interiors: [Interiors.Interior60, Interiors.Interior48],
+    interiors: [Interiors.Interior60, Interiors.Interior15],
     desc: "Discover this unique architectural gem, a multi-level tropical retreat surrounded by lush greenery and vibrant flora. The organic, flowing design of the building seamlessly integrates with the natural landscape, offering a tranquil and luxurious living experience. Each level features spacious terraces perfect for relaxation and enjoying the serene environment. Ideal for those seeking an exotic, nature-immersed lifestyle with all the comforts of modern living.",
   },
   {
