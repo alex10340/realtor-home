@@ -59,3 +59,5 @@ export { default as Interior58 } from "./interior58.jpg";
 export { default as Interior59 } from "./interior59.jpg";
 export { default as Interior60 } from "./interior60.jpg";
 export { default as Interior61 } from "./interior61.jpg";
+export { default as Interior62 } from "./interior62.jpg";
+export { default as Interior63 } from "./interior63.jpg";
