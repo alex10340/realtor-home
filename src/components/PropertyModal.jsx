@@ -85,7 +85,7 @@ const PropertyModal = ({ house, toggleModal }) => {
         </div>
 
         {interiors.length > 0 ? (
-          <div className="overflow-hidden relative flex-shrink-0">
+          <div className="overflow-hidden relative flex-shrink-0 bg-gray-500">
             <Slider
               ref={carouselRef}
               {...settings}
