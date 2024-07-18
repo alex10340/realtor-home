@@ -21,7 +21,7 @@ const Card = ({ house, toggleModal = () => {} }) => {
   return (
     <>
       <div
-        className="m-[10px] shadow-xl card card-compact cursor-pointer group"
+        className="m-[10px] shadow-xl card card-compact cursor-pointer group outline outline-1 outline-neutral-content"
         onClick={openModal}
       >
         <figure className="overflow-hidden aspect-[2/1.25]">
