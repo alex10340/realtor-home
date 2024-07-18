@@ -8,6 +8,7 @@ const Showroom = () => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [sortOption, setSortOption] = useState("");
   const [selectedListingType, setSelectedListingType] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const parsePrice = (priceStr) => {
     return parseFloat(priceStr.replace(/[^0-9.-]+/g, ""));
@@ -20,10 +21,18 @@ const Showroom = () => {
   );
 
   const filteredHouses = houses.filter((house) => {
-    return (
-      (selectedLocation ? house.location === selectedLocation : true) &&
-      (selectedListingType ? house.listingType === selectedListingType : true)
-    );
+    const matchesLocation = selectedLocation
+      ? house.location === selectedLocation
+      : true;
+    const matchesListingType = selectedListingType
+      ? house.listingType === selectedListingType
+      : true;
+    const matchesSearchTerm = searchTerm
+      ? house.location?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        house.listingType?.toLowerCase().includes(searchTerm.toLowerCase())
+      : true;
+
+    return matchesLocation && matchesListingType && matchesSearchTerm;
   });
 
   const sortedHouses = filteredHouses.slice().sort((a, b) => {
@@ -49,7 +58,13 @@ const Showroom = () => {
 
       <div className="flex gap-4 mb-6">
         <label className="flex gap-2 items-center w-full max-w-xs input input-bordered">
-          <input type="text" className="grow" placeholder="Search" />
+          <input
+            type="text"
+            className="grow"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
