@@ -38,9 +38,7 @@ const Card = ({ house, toggleModal = () => {} }) => {
             <p className="text-right opacity-90 text-[15px]">{location}</p>
           </div>
           <div className="flex px-4 py-2 mx-[-16px] mb-[-16px] rounded-b-2xl bg-neutral-content text-neutral font-medium">
-            <p>
-              {listingType} {/* - ID: {id} REMOVE */}
-            </p>
+            <p>{listingType}</p>
             <div className="flex flex-1 justify-end items-center space-x-1">
               <div>{bedrooms}</div>
               <LuBed />

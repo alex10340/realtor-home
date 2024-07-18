@@ -18,7 +18,7 @@ const Footer = () => {
               <br />
               Your real estate platform since 2004
             </p>
-            <label className="flex gap-2 mt-6 cursor-pointer">
+            <label className="flex gap-2 mt-5 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
