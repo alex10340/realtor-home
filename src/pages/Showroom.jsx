@@ -120,11 +120,17 @@ const Showroom = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] my-12">
-        {sortedHouses.map((house) => (
-          <Card key={house.id} house={house} />
-        ))}
-      </div>
+      {sortedHouses.length > 0 ? (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] my-12">
+          {sortedHouses.map((house) => (
+            <Card key={house.id} house={house} />
+          ))}
+        </div>
+      ) : (
+        <p className="mt-16 text-xl text-center">
+          No houses found matching the criteria.
+        </p>
+      )}
     </div>
   );
 };
