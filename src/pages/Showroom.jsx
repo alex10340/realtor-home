@@ -127,8 +127,12 @@ const Showroom = () => {
           ))}
         </div>
       ) : (
-        <p className="mt-16 text-xl text-center">
-          No houses found matching the criteria.
+        <p className="my-24 text-xl font-medium text-center">
+          No houses found matching the criteria
+          <span className="text-base font-normal opacity-85">
+            <br />
+            Try changing your filtering settings.
+          </span>
         </p>
       )}
     </div>
