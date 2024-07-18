@@ -38,7 +38,7 @@ const Carousel = () => {
     accessibility: false,
     responsive: [
       {
-        breakpoint: 1235,
+        breakpoint: 1275,
         settings: {
           slidesToShow: 3,
         },

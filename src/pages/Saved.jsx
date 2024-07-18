@@ -28,7 +28,7 @@ const Saved = () => {
           ))}
         </div>
       ) : (
-        <p className="pb-10 text-xl font-medium text-left">
+        <p className="mb-48 text-xl font-medium text-left">
           No houses saved yet
           <span className="text-base font-normal opacity-85">
             <br />

@@ -12,7 +12,7 @@ const DownloadApp = () => {
             </figure>
           </div>
           <div className="px-12 py-10">
-            <h2 className="mb-3 text-4xl font-bold text-center sm:text-left">
+            <h2 className="mb-6 text-4xl font-bold text-center sm:text-left">
               Download the{" "}
               <span className="underline text-neutral">AcmeHome app</span>
             </h2>

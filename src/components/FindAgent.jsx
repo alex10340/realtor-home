@@ -14,7 +14,7 @@ const FindAgent = () => {
         </div>
 
         <div className="py-5 sm:px-10 sm:py-10">
-          <h2 className="mb-3 text-4xl font-bold text-center sm:text-left">
+          <h2 className="mb-6 text-4xl font-bold text-center sm:text-left">
             Find your agent{" "}
             <span className="underline text-neutral">today</span>
           </h2>

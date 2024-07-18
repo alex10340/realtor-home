@@ -166,7 +166,7 @@ export const houses = [
     bedrooms: "4",
     bathrooms: "2",
     interiors: [Interiors.Interior17, Interiors.Interior16],
-    // desc: ""
+    desc: "This charming single-story home showcases a traditional design with a welcoming front entrance. The exterior is freshly painted and features elegant arched windows that provide plenty of natural light. A well-maintained front lawn and thoughtfully landscaped garden beds add to its curb appeal. Located in a peaceful neighborhood, this house is perfect for families looking for comfort and convenience. With its spacious interior and serene surroundings, it offers a wonderful place to call home.",
   },
   {
     id: 12,
@@ -304,6 +304,6 @@ export const houses = [
     bedrooms: "3",
     bathrooms: "2",
     interiors: [Interiors.Interior48, Interiors.Interior45],
-    // desc:""
+    desc: "This stunning two-story home features a modern exterior with a blend of brick and siding, complemented by a beautifully landscaped front yard. It boasts large windows for ample natural light, a spacious driveway leading to a two-car garage, and a welcoming front porch. The meticulously maintained lawn and garden beds enhance its curb appeal. Inside, expect a seamless blend of comfort and style, perfect for family living. An ideal choice for those seeking a luxurious yet cozy abode.",
   },
 ];
