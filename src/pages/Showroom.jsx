@@ -67,7 +67,7 @@ const Showroom = () => {
 
       <p className="mb-2 font-medium">Filters</p>
 
-      <div className="flex gap-4 mb-6 max-sm:flex-wrap">
+      <div className="flex gap-4 max-sm:flex-wrap">
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
@@ -105,7 +105,7 @@ const Showroom = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] mb-12">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] my-12">
         {sortedHouses.map((house) => (
           <Card key={house.id} house={house} />
         ))}
