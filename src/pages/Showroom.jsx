@@ -134,11 +134,14 @@ const Showroom = () => {
       </div>
 
       {sortedHouses.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] my-12">
-          {sortedHouses.map((house) => (
-            <Card key={house.id} house={house} />
-          ))}
-        </div>
+        <>
+          <p className="my-10 text-xl font-medium">{`${sortedHouses.length} houses matching criteria`}</p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-[-10px] mb-12">
+            {sortedHouses.map((house) => (
+              <Card key={house.id} house={house} />
+            ))}
+          </div>
+        </>
       ) : (
         <p className="my-24 text-xl font-medium text-center">
           No houses found matching the criteria
