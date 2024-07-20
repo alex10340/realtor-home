@@ -1,15 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { locations } from "../data/allData";
 import HeroImg from "../assets/hero.jpg";
-
-const locations = [
-  "Evergreen Heights",
-  "Willowbrook Estates",
-  "Maplewood Grove",
-  "Cedarview Harbor",
-  "Silverleaf Meadows",
-  "Magnolia Bay",
-];
 
 const Hero = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -28,9 +20,11 @@ const Hero = () => {
     setSearchInput(value);
     if (value) {
       setSuggestions(
-        locations.filter((location) =>
-          location.toLowerCase().includes(value.toLowerCase())
-        )
+        locations
+          .map((location) => location.name)
+          .filter((location) =>
+            location.toLowerCase().includes(value.toLowerCase())
+          )
       );
     } else {
       setSuggestions([]);
@@ -95,7 +89,7 @@ const Hero = () => {
               </button>
 
               {suggestions.length > 0 && (
-                <ul className="absolute left-0 top-full mt-2 w-full text-base menu bg-base-100 rounded-box">
+                <ul className="absolute left-0 top-full mt-2 w-full menu bg-base-100 rounded-box">
                   {suggestions.map((suggestion, index) => (
                     <li key={index}>
                       <a onClick={() => handleSuggestionClick(suggestion)}>
