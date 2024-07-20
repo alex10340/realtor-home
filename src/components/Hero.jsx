@@ -2,8 +2,18 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HeroImg from "../assets/hero.jpg";
 
+const locations = [
+  "Evergreen Heights",
+  "Willowbrook Estates",
+  "Maplewood Grove",
+  "Cedarview Harbor",
+  "Silverleaf Meadows",
+  "Magnolia Bay",
+];
+
 const Hero = () => {
   const [searchInput, setSearchInput] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -11,6 +21,26 @@ const Hero = () => {
     if (searchInput.trim()) {
       navigate(`/showroom?q=${encodeURIComponent(searchInput)}`);
     }
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchInput(value);
+    if (value) {
+      setSuggestions(
+        locations.filter((location) =>
+          location.toLowerCase().includes(value.toLowerCase())
+        )
+      );
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setSearchInput(suggestion);
+    setSuggestions([]);
+    navigate(`/showroom?q=${encodeURIComponent(suggestion)}`);
   };
 
   return (
@@ -22,7 +52,7 @@ const Hero = () => {
     >
       <div className="bg-opacity-55 bg-[#736f98] hero-overlay"></div>
       <div className="text-white drop-shadow hero-content">
-        <div className="max-w-xl">
+        <div className="mx-auto max-w-xl">
           <div className="mb-20 text-center">
             <h1 className="mb-3 text-4xl font-extrabold lg:text-5xl text-balance">
               Discover your new home
@@ -34,20 +64,20 @@ const Hero = () => {
             </h2>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex relative flex-col items-center w-full">
             <p className="drop-shadow opacity-85 label">
               Search for your area, eg. Evergreen Heights
             </p>
             <form
               onSubmit={handleSearch}
-              className="flex gap-2 items-center w-full text-neutral input input-bordered"
+              className="flex relative gap-2 items-center w-full text-neutral input input-bordered"
             >
               <input
                 type="text"
                 className="grow"
                 placeholder="Search"
                 value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
+                onChange={handleInputChange}
               />
               <button type="submit">
                 <svg
@@ -63,6 +93,18 @@ const Hero = () => {
                   />
                 </svg>
               </button>
+
+              {suggestions.length > 0 && (
+                <ul className="absolute left-0 top-full z-50 mt-2 w-full menu bg-base-100 rounded-box">
+                  {suggestions.map((suggestion, index) => (
+                    <li key={index}>
+                      <a onClick={() => handleSuggestionClick(suggestion)}>
+                        {suggestion}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </form>
           </div>
         </div>
