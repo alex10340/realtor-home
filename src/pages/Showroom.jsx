@@ -59,9 +59,9 @@ const Showroom = () => {
         </Link>
       </div>
 
-      <p className="mb-2 font-medium">Search</p>
+      <p className="mb-2 font-medium">Filters</p>
 
-      <div className="flex gap-4 mb-6">
+      <div className="flex gap-4 max-lg:flex-wrap">
         <label className="flex gap-2 items-center w-full max-w-xs input input-bordered">
           <input
             type="text"
@@ -91,11 +91,6 @@ const Showroom = () => {
             />
           </svg>
         </label>
-      </div>
-
-      <p className="mb-2 font-medium">Filters</p>
-
-      <div className="flex gap-4 max-sm:flex-wrap">
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
