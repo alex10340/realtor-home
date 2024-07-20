@@ -84,7 +84,7 @@ const Hero = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                   fill="currentColor"
-                  className="w-4 h-4 opacity-70"
+                  className="w-5 h-5 opacity-70"
                 >
                   <path
                     fillRule="evenodd"
@@ -95,7 +95,7 @@ const Hero = () => {
               </button>
 
               {suggestions.length > 0 && (
-                <ul className="absolute left-0 top-full z-50 mt-2 w-full menu bg-base-100 rounded-box">
+                <ul className="absolute left-0 top-full mt-2 w-full menu bg-base-100 rounded-box">
                   {suggestions.map((suggestion, index) => (
                     <li key={index}>
                       <a onClick={() => handleSuggestionClick(suggestion)}>
