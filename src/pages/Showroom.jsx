@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { scrollToTop } from "../utils/scrollToTop";
 import { houses } from "../data/allData";
 import Card from "../components/Card";
@@ -8,7 +8,12 @@ const Showroom = () => {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [sortOption, setSortOption] = useState("");
   const [selectedListingType, setSelectedListingType] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams({ q: "" });
+  const q = searchParams.get("q");
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   const parsePrice = (priceStr) => {
     return parseFloat(priceStr.replace(/[^0-9.-]+/g, ""));
@@ -27,12 +32,12 @@ const Showroom = () => {
     const matchesListingType = selectedListingType
       ? house.listingType === selectedListingType
       : true;
-    const matchesSearchTerm = searchTerm
-      ? house.location?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        house.listingType?.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesQ = q
+      ? house.location?.toLowerCase().includes(q.toLowerCase()) ||
+        house.listingType?.toLowerCase().includes(q.toLowerCase())
       : true;
 
-    return matchesLocation && matchesListingType && matchesSearchTerm;
+    return matchesLocation && matchesListingType && matchesQ;
   });
 
   const sortedHouses = filteredHouses.slice().sort((a, b) => {
@@ -62,8 +67,16 @@ const Showroom = () => {
             type="text"
             className="grow"
             placeholder="Search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            value={q}
+            onChange={(e) =>
+              setSearchParams(
+                (prev) => {
+                  prev.set("q", e.target.value);
+                  return prev;
+                },
+                { replace: true }
+              )
+            }
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
