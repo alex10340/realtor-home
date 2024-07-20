@@ -45,13 +45,13 @@ const Hero = () => {
 
   return (
     <div
-      className="min-h-[500px] lg:min-h-[600px] hero"
+      className="relative min-h-[500px] lg:min-h-[600px] hero"
       style={{
         backgroundImage: `url(${HeroImg})`,
       }}
     >
       <div className="bg-opacity-55 bg-[#736f98] hero-overlay"></div>
-      <div className="text-white drop-shadow hero-content">
+      <div className="relative z-10 text-white drop-shadow hero-content">
         <div className="mx-auto max-w-xl">
           <div className="mb-20 text-center">
             <h1 className="mb-3 text-4xl font-extrabold lg:text-5xl text-balance">
@@ -95,7 +95,7 @@ const Hero = () => {
               </button>
 
               {suggestions.length > 0 && (
-                <ul className="absolute left-0 top-full mt-2 w-full menu bg-base-100 rounded-box">
+                <ul className="absolute left-0 top-full mt-2 w-full text-base menu bg-base-100 rounded-box">
                   {suggestions.map((suggestion, index) => (
                     <li key={index}>
                       <a onClick={() => handleSuggestionClick(suggestion)}>
