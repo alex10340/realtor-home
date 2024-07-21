@@ -29,7 +29,6 @@ const PropertyModal = ({ house, toggleModal }) => {
 
   const toggleFavorite = () => {
     isFavorited ? removeFavorite(id) : addFavorite(id);
-    console.log(!isFavorited);
   };
 
   const categoryClass = classNames(

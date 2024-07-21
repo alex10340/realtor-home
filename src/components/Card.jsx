@@ -14,7 +14,6 @@ const Card = ({ house, toggleModal = () => {} }) => {
 
   const openModal = () => {
     toggleModal();
-    console.log({ id });
     document.getElementById(`property-modal-${id}`).showModal();
   };
 
