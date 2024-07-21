@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
 import { scrollToTop } from "../utils/scrollToTop";
+import logo from "../assets/logo.png";
+import user from "../assets/user.webp";
 
 const Navbar = () => {
   return (
@@ -90,10 +91,7 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full">
-                  <img
-                    alt="User Profile"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                  />
+                  <img alt="User Profile" src={user} />
                 </div>
               </div>
               <ul
