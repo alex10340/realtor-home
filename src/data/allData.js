@@ -136,7 +136,7 @@ export const houses = [
   },
   {
     id: 9,
-    location: "Evergreen Heights",
+    location: "Silverleaf Meadows",
     price: "687 000€",
     img: Houses.House09,
     category: "None",
