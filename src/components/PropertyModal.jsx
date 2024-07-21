@@ -59,7 +59,7 @@ const PropertyModal = ({ house, toggleModal }) => {
 
   return (
     <dialog id={`property-modal-${id}`} className="transition-none modal">
-      <div className="flex flex-col p-0 h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden w-[100vw] ">
+      <div className="flex flex-col p-0 h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden w-[100vw]">
         <div className="flex justify-between items-center m-2">
           <div className="pl-2 text-xl cursor-default hover:bg-white btn btn-ghost no-animation">
             <div>
@@ -84,7 +84,7 @@ const PropertyModal = ({ house, toggleModal }) => {
         </div>
 
         {interiors.length > 0 ? (
-          <div className="overflow-hidden relative flex-shrink-0 bg-gray-500">
+          <div className="relative flex-shrink-0">
             <Slider
               ref={carouselRef}
               {...settings}
@@ -133,7 +133,7 @@ const PropertyModal = ({ house, toggleModal }) => {
           />
         )}
 
-        <div className="flex overflow-hidden flex-col flex-1 gap-0 p-0 card-body">
+        <div className="flex flex-col flex-1 gap-0 p-0 card-body">
           <div className="flex items-center p-6">
             <p className="text-xl font-bold">{price}</p>
             <p className="text-right opacity-90 text-[15px]">{location}</p>
@@ -149,7 +149,7 @@ const PropertyModal = ({ house, toggleModal }) => {
             </div>
           </div>
 
-          <div className="overflow-auto flex-1">
+          <div className="flex-1">
             <p className="p-6 pb-0 font-bold underline underline-offset-4 text-neutral">
               Description
             </p>
