@@ -2,7 +2,7 @@ const AgencySection = ({ logo, name, desc }) => {
   return (
     <div className="flex items-center lg:px-6">
       <div>
-        <div className="flex gap-2 items-center p-0 text-lg font-bold cursor-default md:pl-8 lg:text-xl hover:bg-white no-animation">
+        <div className="flex gap-2 items-center p-0 text-lg font-bold cursor-default md:pl-8 lg:text-xl no-animation">
           <img src={logo} alt="Agency Logo" className="w-12" />
           <p>AcmeHome {name}</p>
         </div>
