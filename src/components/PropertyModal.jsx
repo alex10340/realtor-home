@@ -61,11 +61,9 @@ const PropertyModal = ({ house, toggleModal }) => {
     <dialog id={`property-modal-${id}`} className="transition-none modal">
       <div className="flex flex-col p-0 h-full max-h-full min-[512px]:h-[95%] rounded-none min-[512px]:rounded-xl modal-box overflow-x-hidden w-[100vw]">
         <div className="flex justify-between items-center m-2">
-          <div className="pl-2 text-xl cursor-default hover:bg-white btn btn-ghost no-animation">
-            <div>
-              <img src={logo} alt="logo" className="w-10" />
-            </div>
-            <div>AcmeHome</div>
+          <div className="flex gap-2 items-center p-0 pl-2 text-lg font-bold cursor-default lg:text-xl">
+            <img src={logo} alt="Logo" className="w-10" />
+            <p>AcmeHome</p>
           </div>
           <form method="dialog">
             <button className="btn" onClick={sliderReset}>
